@@ -26,7 +26,7 @@ export default function Home() {
         <section className="about-section">
           <Carousel></Carousel>
           <AboutUs></AboutUs>
-          <ToastContainer
+          {/* <ToastContainer
             position="bottom-right"
             autoClose={5000}
             hideProgressBar={false}
@@ -37,7 +37,7 @@ export default function Home() {
             draggable
             pauseOnHover
             theme="dark"
-          />
+          /> */}
           <Contact></Contact>
           <FAQ></FAQ>
         </section>
