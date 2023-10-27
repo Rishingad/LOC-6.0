@@ -1,0 +1,14 @@
+.social-sidebar-container {
+  background-color: var(--primary-color);
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  row-gap: 3rem;
+  padding: 1.3rem 1.2rem 1.3rem 1.2rem;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  color: --font-color;
+}

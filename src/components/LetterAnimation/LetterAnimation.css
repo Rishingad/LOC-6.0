@@ -1,0 +1,46 @@
+.text-overlay {
+  font-size: 1.5rem;
+  color: #a1fd63;
+  font-family: "Share Tech Mono", monospace;
+  text-shadow: 1px 1px 1px #a1fd63;
+  font-weight: lighter;
+}
+
+.text-overlay.center-text {
+  font-weight: 900;
+  text-shadow: 3px 3px 1px #a1fd63;
+  top: 50%;
+  left: 50%;
+  font-size: 4rem;
+  transform: translate(-50%, -50%);
+}
+.text-overlay.topLeft {
+  top: 20%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+}
+.text-overlay.topRight {
+  top: 20%;
+  right: 20%;
+  transform: translate(-50%, -50%);
+}
+.text-overlay.bottomLeft {
+  bottom: 20%;
+  left: 20%;
+  transform: translate(50%, -50%);
+}
+.text-overlay.bottomRight {
+  bottom: 20%;
+  right: 20%;
+  transform: translate(50%, -50%);
+}
+.text-overlay.centerLeft {
+  top: 50%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+}
+.text-overlay.centerRight {
+  top: 50%;
+  right: 20%;
+  transform: translate(-50%, -50%);
+}

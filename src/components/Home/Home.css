@@ -1,0 +1,52 @@
+@import url(https://fonts.googleapis.com/css?family=Exo:100);
+@import url("https://fonts.googleapis.com/css2?family=Monoton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rowdies&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap");
+.home-section {
+  height: calc(100vh-15rem);
+  width: 100vw;
+  margin-top: 15rem;
+  display: flex;
+  overflow-x: hidden;
+}
+.box-animation-wrapper {
+  position: absolute;
+  top: 50%;
+  right: 30%;
+  transform: translate(58%, -50%);
+}
+
+.banner {
+  position: relative;
+  min-width: 0;
+  max-width: 90rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 50rem;
+  left: 16rem;
+}
+.banner .horizontal-hackathon-info {
+  font-family: "Rowdies", sans-serif;
+  font-weight: 300;
+  font-size: 2.2rem;
+  letter-spacing: 0.3rem;
+  text-align: left;
+  display: flex;
+  position: absolute;
+  left: 0;
+  transform: translateX(-60%) rotate(270deg);
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.banner .main-banner-heading {
+  /* position: absolute;
+  right: 0; */
+  font-family: "Monoton", sans-serif;
+  color: var(--primary-color);
+  font-size: 10.5rem;
+  text-align: left;
+  letter-spacing: 0.5rem;
+  margin-left: 2rem;
+}
