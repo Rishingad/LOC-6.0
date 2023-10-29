@@ -8,38 +8,24 @@ import AboutUs from "../components/AboutUs/Aboutus";
 import FAQ from "../components/FAQ/FAQ";
 import Contact from "../components/Contact/Contact";
 import { redirect } from "next/navigation";
-import { ToastContainer, toast } from "react-toastify";
-import useStorage from '../hooks/useSessionStorage'
+import useStorage from "../hooks/useSessionStorage";
 
 export default function Home() {
-  const storage = useStorage()
+  const storage = useStorage();
   function isTokenAvailable() {
     return storage.getItem("token");
   }
-  const hasToken = isTokenAvailable();
-  if (hasToken) {
+  if (isTokenAvailable) {
     return (
       <>
         <Navbar disableLinks={false}></Navbar>
         <SocialMediaSideBar></SocialMediaSideBar>
         <HomePage></HomePage>
         <section className="about-section">
-          <Carousel></Carousel>
           <AboutUs></AboutUs>
-          {/* <ToastContainer
-            position="bottom-right"
-            autoClose={5000}
-            hideProgressBar={false}
-            newestOnTop={false}
-            closeOnClick
-            rtl={false}
-            pauseOnFocusLoss
-            draggable
-            pauseOnHover
-            theme="dark"
-          /> */}
-          <Contact></Contact>
+          <Carousel></Carousel>
           <FAQ></FAQ>
+          <Contact></Contact>
         </section>
       </>
     );

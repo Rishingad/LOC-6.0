@@ -4,15 +4,14 @@ import axios from "axios";
 import { IP } from "../../constant";
 import { ToastContainer, toast } from "react-toastify";
 import { useRouter } from "next/navigation";
-import styles from './LoginSignup.module.css'
-import useStorage from '../../hooks/useSessionStorage'
+import styles from "./LoginSignup.module.css";
+import useStorage from "../../hooks/useSessionStorage";
 
 const LoginSignup = () => {
   const switchRef = useRef(null);
   const loginFormRef = useRef(null);
   const signupFormRef = useRef(null);
   const storage = useStorage();
-
 
   const [loginData, setLoginData] = useState({
     email: "",
@@ -32,11 +31,11 @@ const LoginSignup = () => {
     const signupForm = signupFormRef.current;
 
     if (switchCheckbox.checked) {
-      loginForm.style.display = "none";
-      signupForm.style.display = "block";
+      signupForm.classList.toggle(styles["back-checked"]);
+      loginForm.classList.toggle(styles["front-checked"]);
     } else {
-      loginForm.style.display = "block";
-      signupForm.style.display = "none";
+      signupForm.classList.remove(styles["back-checked"]);
+      loginForm.classList.remove(styles["front-checked"]);
     }
   };
 
@@ -49,8 +48,7 @@ const LoginSignup = () => {
       console.log("Login successful", response.data);
       alert("Login successful");
 
-      storage.setItem("token", response.data.token)
-
+      storage.setItem("token", response.data.token);
 
       router.push("/");
       toast.success("Login Successful", {
@@ -90,7 +88,6 @@ const LoginSignup = () => {
       console.log("Signup successful", response.data);
       alert("Signup successful");
 
-
       storage.setItem("token", response.data.token);
 
       router.push("/");
@@ -106,7 +103,7 @@ const LoginSignup = () => {
       });
       // Handle success response and store the token if needed
     } catch (error) {
-      alert("Login failed");
+      alert("Signup failed");
       console.error("Signup failed", error);
       toast.error("Signup Failed", {
         position: "bottom-right",
@@ -153,8 +150,11 @@ const LoginSignup = () => {
           onChange={handleSwitch}
         />
       </div>
-      <div className={`${styles["login-form"]} ${styles["absolute"]}`} ref={loginFormRef}>
-        <div className={`${styles.flex} ${styles.front} ${styles["front-not"]}`}>
+      <div className={`${styles["login-form"]} ${styles["absolute"]}`}>
+        <div
+          className={`${styles.flex} ${styles.front} ${styles["front-not"]}`}
+          ref={loginFormRef}
+        >
           <div className={styles["heading"]}>Log In</div>
           <div className={styles["email-container"]}>
             <input
@@ -186,9 +186,10 @@ const LoginSignup = () => {
             </button>
           </div>
         </div>
-      </div>
-      <div className={`${styles["login-form"]} ${styles["absolute"]}`} ref={signupFormRef}>
-        <div className={`${styles.flex} ${styles.front} ${styles["front-not"]}`}>
+        <div
+          className={`${styles.flex} ${styles.back} ${styles["back-not"]}`}
+          ref={signupFormRef}
+        >
           <div className={styles["heading"]}>Sign Up</div>
           <div className={styles["fname-container"]}>
             <input
