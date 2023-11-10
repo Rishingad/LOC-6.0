@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@800&family=M+PLUS+Rounded+1c:wght@800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
+.home-section {
+  position: relative;
+  /* z-index: 100; */
+  height: 100vh;
+  padding: 0 5rem;
+  padding-top: 8rem;
+  box-sizing: border-box;
+}
+
+.home-section:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgba(0, 0, 0, 0.5)),
+      to(rgba(0, 0, 0, 0.5))
+    ),
+    url("../../assets/images/homebg.png") no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../../assets/images/homebg.png") no-repeat;
+  background-position: 14rem -11rem;
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: -10;
+}
+
+.main-wrapper {
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  height: 100%;
+}
+
+.main-wrapper .title {
+  text-transform: uppercase;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  color: #06f8db;
+  font-size: 6rem;
+  position: relative;
+  z-index: 8;
+  text-align: center;
+}
+.main-wrapper .title::before {
+  position: absolute;
+  content: "6.0";
+  font-size: 20rem;
+  font-family: "Inter";
+  z-index: -10;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-text-fill-color: rgb(0, 0, 0);
+  -webkit-text-stroke: 5px #094a43 !important;
+}
+
+.main-wrapper .coming-soon-wrapper {
+  font-size: 4rem;
+  font-family: "Orbitron";
+  color: #f5f5f5;
+}
+
+@media only screen and (max-width: 1200px) {
+  .navbar .nav-menu {
+    position: absolute;
+    top: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    row-gap: 5rem;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #000;
+    color: #fff;
+    height: 100vh;
+    z-index: 1000;
+    box-sizing: border-box;
+    padding: 3rem 3rem;
+    margin: 0;
+    clip-path: circle(0% at 0 0);
+    transition: 1s ease-in-out;
+    box-sizing: border-box;
+  }
+  .navbar .nav-menu.menu-show {
+    clip-path: circle(140.9% at 0 0);
+  }
+  .navbar .nav-menu li a {
+    color: #fff;
+  }
+  .navbar .nav-menu .MuiSvgIcon-root {
+    position: fixed;
+    display: block;
+    right: 10%;
+    top: 5%;
+    color: #fff;
+  }
+  .navbar .MuiSvgIcon-root {
+    display: inline-block;
+
+    color: #fff;
+  }
+  .home-section:before {
+    background-position: -20rem -15rem;
+  }
+}
+@media only screen and (max-width: 991px) {
+}
+@media only screen and (max-width: 768px) {
+}
+@media only screen and (max-width: 600px) {
+}
+@media only screen and (max-width: 468px) {
+  .home-section {
+    padding: 0 2.5rem;
+  }
+  .main-wrapper {
+    padding-top: 2rem;
+    justify-content: space-evenly;
+  }
+  .main-wrapper .title {
+    font-size: 46px;
+  }
+  .main-wrapper .title::before {
+    font-size: 13rem;
+  }
+}
