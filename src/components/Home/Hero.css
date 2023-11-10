@@ -117,6 +117,22 @@
 @media only screen and (max-width: 991px) {
 }
 @media only screen and (max-width: 768px) {
+  .home-section {
+    padding: 0 2.5rem;
+  }
+  .main-wrapper {
+    padding-top: 5rem;
+    justify-content: space-evenly;
+  }
+  .main-wrapper .title {
+    font-size: 54px;
+  }
+  .main-wrapper .title::before {
+    font-size: 18rem;
+  }
+  .main-wrapper .coming-soon-wrapper {
+    font-size: 3rem;
+  }
 }
 @media only screen and (max-width: 600px) {
 }
@@ -125,13 +141,13 @@
     padding: 0 2.5rem;
   }
   .main-wrapper {
-    padding-top: 2rem;
+    padding-top: 5rem;
     justify-content: space-evenly;
   }
   .main-wrapper .title {
     font-size: 46px;
   }
   .main-wrapper .title::before {
-    font-size: 13rem;
+    font-size: 15rem;
   }
 }
