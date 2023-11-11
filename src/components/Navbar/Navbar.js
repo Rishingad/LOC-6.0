@@ -13,22 +13,22 @@ const Navbar = () => {
   }
   return (
     <nav className="navbar">
-      <img src={Logo} height={80} width={90} alt=""></img>
+      <a href="/"><img src={Logo} height={80} width={90} alt=""></img></a>
       <ul className={`nav-menu ${isMenuOpen ? "menu-show" : ""}`}>
         <li className="cursor-pointer">
-          <a href={"/"}>About</a>
+          <a href={"#about"}>About</a>
         </li>
         <li className="cursor-pointer">
-          <a href={"#about"}>Domains</a>
+          <a href={"#domain"}>Domains</a>
         </li>
         <li className="cursor-pointer">
-          <a href={"#gallery"}>Prizes</a>
+          <a href={"#prize"}>Prizes</a>
         </li>
         <li className="cursor-pointer">
-          <a href={"#faq"}>Contact Us</a>
+          <a href={"#contact"}>Contact Us</a>
         </li>
         <li className="cursor-pointer">
-          <a href={"#contact"}>FAQs</a>
+          <a href={"#faq"}>FAQs</a>
         </li>
         <li className="cursor-pointer">
           <a href={"/register"}>Register Now</a>
