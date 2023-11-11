@@ -13,7 +13,9 @@ const Navbar = () => {
   }
   return (
     <nav className="navbar">
-      <a href="/"><img src={Logo} height={80} width={90} alt=""></img></a>
+      <a href="/">
+        <img src={Logo} height={80} width={90} alt=""></img>
+      </a>
       <ul className={`nav-menu ${isMenuOpen ? "menu-show" : ""}`}>
         <li className="cursor-pointer">
           <a href={"#about"}>About</a>
@@ -25,10 +27,10 @@ const Navbar = () => {
           <a href={"#prize"}>Prizes</a>
         </li>
         <li className="cursor-pointer">
-          <a href={"#contact"}>Contact Us</a>
+          <a href={"#faq"}>FAQs</a>
         </li>
         <li className="cursor-pointer">
-          <a href={"#faq"}>FAQs</a>
+          <a href={"#contact"}>Contact Us</a>
         </li>
         <li className="cursor-pointer">
           <a href={"/register"}>Register Now</a>
