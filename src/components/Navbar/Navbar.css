@@ -11,7 +11,7 @@
   z-index: 10;
   padding: 1.5rem 7%;
   box-sizing: border-box;
-  /* background-color: #000; */
+  background-color: #000;
 }
 .navbar .MuiSvgIcon-root {
   display: none;
@@ -35,4 +35,49 @@
 .navbar .nav-menu li a {
   color: #fff;
   text-decoration: none;
+}
+
+@media only screen and (max-width: 1200px) {
+  .navbar .nav-menu {
+    position: absolute;
+    top: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    row-gap: 5rem;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    height: 100vh;
+    z-index: 1000;
+    box-sizing: border-box;
+    padding: 3rem 3rem;
+    margin: 0;
+    clip-path: circle(0% at 0 0);
+    transition: 1s ease-in-out;
+    box-sizing: border-box;
+  }
+  .navbar .nav-menu.menu-show {
+    clip-path: circle(140.9% at 0 0);
+  }
+  .navbar .nav-menu li a {
+    color: #fff;
+  }
+  .navbar .nav-menu .MuiSvgIcon-root {
+    position: fixed;
+    display: block;
+    right: 10%;
+    top: 5%;
+    color: #fff;
+  }
+  .navbar .MuiSvgIcon-root {
+    display: inline-block;
+
+    color: #fff;
+  }
+  .home-section:before {
+    background-position: -20rem -15rem;
+  }
 }
