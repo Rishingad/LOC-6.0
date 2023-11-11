@@ -49,7 +49,7 @@ const Register = () => {
         textAlign: "center",
       }}
     >
-      <h1 className="title">Register Now</h1>
+      <h1 className="form-title">Register Now</h1>
       <FormControl onSubmit={handleSubmit}>
         <div className="form">
           <Grid
@@ -60,6 +60,7 @@ const Register = () => {
           >
             <Grid item xs={12} sm={6} style={{ order: 1 }}>
               <label
+                className="form-label"
                 htmlFor="firstName"
                 style={{
                   fontFamily: "Nunito",
@@ -104,6 +105,7 @@ const Register = () => {
 
               <label
                 htmlFor="college"
+                className="form-label"
                 style={{
                   fontFamily: "Nunito",
                   fontSize: "12px",
@@ -146,6 +148,7 @@ const Register = () => {
               />
 
               <label
+                className="form-label"
                 htmlFor="graduationYear"
                 style={{
                   fontFamily: "Nunito",
@@ -189,6 +192,7 @@ const Register = () => {
               />
 
               <label
+                className="form-label"
                 htmlFor="password"
                 style={{
                   fontFamily: "Nunito",
@@ -244,6 +248,7 @@ const Register = () => {
 
             <Grid item xs={12} sm={6} style={{ textAlign: "right", order: 2 }}>
               <label
+                className="form-label"
                 htmlFor="lastName"
                 style={{
                   fontFamily: "Nunito",
@@ -287,6 +292,7 @@ const Register = () => {
               />
 
               <label
+                className="form-label"
                 htmlFor="email"
                 style={{
                   fontFamily: "Nunito",
@@ -330,6 +336,7 @@ const Register = () => {
               />
 
               <label
+                className="form-label"
                 htmlFor="contactNumber"
                 style={{
                   fontFamily: "Nunito",
@@ -373,6 +380,7 @@ const Register = () => {
               />
 
               <label
+                className="form-label"
                 htmlFor="confirmPassword"
                 style={{
                   fontFamily: "Nunito",

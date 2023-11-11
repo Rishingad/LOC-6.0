@@ -1,4 +1,4 @@
- .title {
+ .form-title {
     color: #06F8DB;
     font-size: 64px;
     font-weight: 400;
@@ -8,7 +8,7 @@
     text-align: center;
 }
 
-label {
+.form-label {
     font-family: "Nunito";
     font-size: 12px;
     font-weight: 700;

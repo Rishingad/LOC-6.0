@@ -42,7 +42,7 @@ const Login = () => {
         textAlign: "center",
       }}
     >
-      <h1 className="title">Login</h1>
+      <h1 className="form-title">Login</h1>
       <FormControl onSubmit={handleSubmit}>
         <Grid
           container
