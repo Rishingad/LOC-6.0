@@ -4,7 +4,7 @@ import "./About.css";
 const About = () => {
   return (
     <>
-      <div className="aboutUs-Container">
+      <div id="about" className="aboutUs-Container">
         <h1 className="aboutUs-Head">About</h1>
         <p className="aboutUs-Body">
           Lines of Code (LOC) is not just your ordinary hackathon - it's a
