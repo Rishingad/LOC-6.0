@@ -1,8 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@800&family=M+PLUS+Rounded+1c:wght@800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Vast+Shadow&display=swap');
+
 .home-section {
   position: relative;
-  /* z-index: 100; */
   height: 100vh;
   padding: 0 5rem;
   padding-top: 8rem;
@@ -17,13 +18,11 @@
   top: 0;
   left: 0;
   right: 0;
-  background: -webkit-gradient(
-      linear,
+  background: -webkit-gradient(linear,
       left top,
       left bottom,
       from(rgba(0, 0, 0, 0.5)),
-      to(rgba(0, 0, 0, 0.5))
-    ),
+      to(rgba(0, 0, 0, 0.5))),
     url("../../assets/images/homebg.png") no-repeat;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("../../assets/images/homebg.png") no-repeat;
@@ -44,13 +43,15 @@
 
 .main-wrapper .title {
   text-transform: uppercase;
-  font-family: "M PLUS Rounded 1c", sans-serif;
+  /* font-family: "M PLUS Rounded 1c", sans-serif; */
+  font-family: 'Vast Shadow', serif;
   color: #06f8db;
-  font-size: 6rem;
+  font-size: 5rem;
   position: relative;
   z-index: 8;
   text-align: center;
 }
+
 .main-wrapper .title::before {
   position: absolute;
   content: "6.0";
@@ -75,37 +76,46 @@
     background-position: -20rem -15rem;
   }
 }
-@media only screen and (max-width: 991px) {
-}
+
+@media only screen and (max-width: 991px) {}
+
 @media only screen and (max-width: 768px) {
   .home-section {
     padding: 0 2.5rem;
   }
+
   .main-wrapper {
     padding-top: 5rem;
     justify-content: space-evenly;
   }
+
   .main-wrapper .title {
     font-size: 54px;
   }
+
   .main-wrapper .title::before {
     font-size: 18rem;
   }
+
   .main-wrapper .coming-soon-wrapper {
     font-size: 3rem;
   }
 }
+
 @media only screen and (max-width: 468px) {
   .home-section {
     padding: 0 2.5rem;
   }
+
   .main-wrapper {
     padding-top: 5rem;
     justify-content: space-evenly;
   }
+
   .main-wrapper .title {
     font-size: 46px;
   }
+
   .main-wrapper .title::before {
     font-size: 15rem;
   }
