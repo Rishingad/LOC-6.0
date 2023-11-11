@@ -57,6 +57,7 @@ const Login = () => {
         >
           <Grid item xs={12}>
             <label
+              className="form-label"
               htmlFor="email"
               style={{
                 fontFamily: "Nunito",
@@ -96,6 +97,7 @@ const Login = () => {
 
           <Grid item xs={12}>
             <label
+              className="form-label"
               htmlFor="password"
               style={{
                 fontFamily: "Nunito",
