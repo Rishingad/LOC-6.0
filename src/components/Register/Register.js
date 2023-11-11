@@ -8,8 +8,8 @@ import {
   Box,
   FormControl,
   Typography,
-  Link,
 } from "@mui/material";
+import { Link } from "react-router-dom";
 import { Visibility, VisibilityOff } from "@mui/icons-material";
 import "./Login.css";
 

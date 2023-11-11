@@ -8,8 +8,8 @@ import {
   Box,
   FormControl,
   Typography,
-  Link,
 } from "@mui/material";
+import { Link } from "react-router-dom";
 import { Visibility, VisibilityOff } from "@mui/icons-material";
 import "./Login.css";
 
@@ -172,7 +172,7 @@ const Login = () => {
             >
               Don't have an account?{" "}
               <Link
-                to="/login"
+                to="/register"
                 style={{ color: "#06F8DB", textDecoration: "none" }}
               >
                 Click here to register.
