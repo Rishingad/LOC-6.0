@@ -8,8 +8,8 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 
 function Footer() {
   const iconStyle = {
-    width: "48px",
-    height: "48px",
+    width: "58px",
+    height: "58px",
     borderRadius: "50%",
     backgroundColor: "#1D1D1D66",
     margin: "0 10px",
@@ -38,6 +38,7 @@ function Footer() {
           marginTop="20px"
           color="white"
           padding="10px"
+          spacing={2}
         >
           <Box
             component="div"
@@ -52,12 +53,12 @@ function Footer() {
           >
             <Typography
               variant="subtitle1"
-              className="text"
               style={{
                 color: "#fff",
                 marginTop: "20px",
                 fontFamily: "Nunito",
                 textAlign: "center",
+                fontSize: "20px",
               }}
             >
               Any issues reach out to us
@@ -93,11 +94,18 @@ function Footer() {
           <Grid item md={6}>
             <Box display="flex" alignItems="center" justifyContent="flex-end">
               {" "}
-              {/* Adjusted justifyContent */}
               <IconButton style={iconStyle}>
                 <LocationOnIcon style={{ color: "white" }} />
               </IconButton>
-              <Typography maxWidth={{ xs: "100%", md: "300px" }}>
+              <Typography
+                maxWidth={{
+                  xs: "100%",
+                  md: "300px",
+                  marginLeft: "10px",
+                  fontWeight: "400",
+                  fontSize: "20px",
+                }}
+              >
                 SVKM's Dwarkadas J. Sanghvi College of Engineering,
                 Bhaktivedanta Swami Road, opp. Cooper Hospital, Navpada, JVPD
                 Scheme, Vile Parle, Mumbai, Maharashtra 400056
@@ -112,12 +120,12 @@ function Footer() {
 
         <Typography
           variant="subtitle1"
-          className="text"
           style={{
             color: "#fff",
-            marginTop: "16px",
+            marginTop: "12px",
             fontFamily: "Nunito",
             textAlign: "center",
+            fontSize: "12px",
           }}
         >
           Copyright © Lines of Code 6.0 | All rights reserved
