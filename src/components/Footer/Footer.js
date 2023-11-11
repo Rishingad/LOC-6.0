@@ -47,6 +47,7 @@ function Footer() {
               padding: "10px",
               borderTop: "5px solid #06F8DB",
               marginBottom: { xs: "20px", md: "0" },
+              borderRadius: "5px",
             }}
           >
             <Typography
