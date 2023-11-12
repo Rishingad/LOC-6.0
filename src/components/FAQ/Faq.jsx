@@ -26,7 +26,7 @@ const Faq = () => {
     },
     {
       "question": "How can I contact the organizers for additional questions or assistance?",
-      "answer": "You can reach out to the organizers by emailing coreacm@gmail.com or calling 9372022651. We are here to assist with any questions or concerns."
+      "answer": "You can reach out to the organizers by emailing djsanghavi.acm@gmail.com or calling 9372022651. We are here to assist with any questions or concerns."
     },
     {
       "question": "Can participants seek technical support or resources during the hackathon?",
@@ -40,7 +40,7 @@ const Faq = () => {
   const [add, setAdd] = useState(null);
   const toggleQuestion = (index) => {
     setAdd(add === index ? null : index);
-  };
+  }
   return (
     <div>
       <div id='faq' className='faq_main'>

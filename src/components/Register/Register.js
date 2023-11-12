@@ -34,7 +34,7 @@ const Register = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Add your form submission logic here
+    // Form Submission Logic
     console.log("Form data submitted:", formData);
   };
 
@@ -51,12 +51,11 @@ const Register = () => {
     >
       <h1 className="form-title">Register Now</h1>
       <FormControl onSubmit={handleSubmit}>
-        <div className="form">
+        <div id="form_id" className="form">
           <Grid
             container
             spacing={8}
             justifyContent="space-between"
-            // Use the order property to adjust the order of the items on smaller screens
           >
             <Grid item xs={12} sm={6} style={{ order: 1 }}>
               <label
@@ -64,7 +63,7 @@ const Register = () => {
                 htmlFor="firstName"
                 style={{
                   fontFamily: "Nunito",
-                  fontSize: "12px",
+                  fontSize: "14px",
                   fontWeight: 700,
                   color: "#fff",
                   display: "block",
@@ -92,7 +91,7 @@ const Register = () => {
                     backgroundColor: "#0D0D0D",
                     height: "55px",
                     fontFamily: "Nunito",
-                    fontSize: "12px",
+                    fontSize: "14px",
                     marginBottom: "16px",
                     width: "350.18px",
                     marginLeft: "10px",
@@ -108,7 +107,7 @@ const Register = () => {
                 className="form-label"
                 style={{
                   fontFamily: "Nunito",
-                  fontSize: "12px",
+                  fontSize: "14px",
                   fontWeight: 700,
                   color: "#fff",
                   display: "block",
@@ -138,7 +137,7 @@ const Register = () => {
                     width: "350.18px",
                     marginLeft: "10px",
                     fontFamily: "Nunito",
-                    fontSize: "12px",
+                    fontSize: "14px",
                     marginBottom: "16px",
                   },
                   classes: {
@@ -152,7 +151,7 @@ const Register = () => {
                 htmlFor="graduationYear"
                 style={{
                   fontFamily: "Nunito",
-                  fontSize: "12px",
+                  fontSize: "14px",
                   fontWeight: 700,
                   color: "#fff",
                   display: "block",
@@ -182,7 +181,7 @@ const Register = () => {
                     width: "350.18px",
                     marginLeft: "10px",
                     fontFamily: "Nunito",
-                    fontSize: "12px",
+                    fontSize: "14px",
                     marginBottom: "16px",
                   },
                   classes: {
@@ -196,7 +195,7 @@ const Register = () => {
                 htmlFor="password"
                 style={{
                   fontFamily: "Nunito",
-                  fontSize: "12px",
+                  fontSize: "14px",
                   fontWeight: 700,
                   color: "#fff",
                   display: "block",
@@ -226,7 +225,7 @@ const Register = () => {
                     width: "350.18px",
                     marginLeft: "10px",
                     fontFamily: "Nunito",
-                    fontSize: "12px",
+                    fontSize: "14px",
                     marginBottom: "16px",
                   },
                   endAdornment: (
@@ -252,7 +251,7 @@ const Register = () => {
                 htmlFor="lastName"
                 style={{
                   fontFamily: "Nunito",
-                  fontSize: "12px",
+                  fontSize: "14px",
                   fontWeight: 700,
                   color: "#fff",
                   display: "block",
@@ -282,7 +281,7 @@ const Register = () => {
                     width: "350.18px",
                     marginLeft: "10px",
                     fontFamily: "Nunito",
-                    fontSize: "12px",
+                    fontSize: "14px",
                     marginBottom: "16px",
                   },
                   classes: {
@@ -296,7 +295,7 @@ const Register = () => {
                 htmlFor="email"
                 style={{
                   fontFamily: "Nunito",
-                  fontSize: "12px",
+                  fontSize: "14px",
                   fontWeight: 700,
                   color: "#fff",
                   display: "block",
@@ -308,7 +307,7 @@ const Register = () => {
               </label>
               <TextField
                 type="email"
-                id="email"
+                id="mail"
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
@@ -326,7 +325,7 @@ const Register = () => {
                     width: "350.18px",
                     marginLeft: "10px",
                     fontFamily: "Nunito",
-                    fontSize: "12px",
+                    fontSize: "14px",
                     marginBottom: "16px",
                   },
                   classes: {
@@ -340,7 +339,7 @@ const Register = () => {
                 htmlFor="contactNumber"
                 style={{
                   fontFamily: "Nunito",
-                  fontSize: "12px",
+                  fontSize: "14px",
                   fontWeight: 700,
                   color: "#fff",
                   display: "block",
@@ -370,7 +369,7 @@ const Register = () => {
                     width: "350.18px",
                     marginLeft: "10px",
                     fontFamily: "Nunito",
-                    fontSize: "12px",
+                    fontSize: "14px",
                     marginBottom: "16px",
                   },
                   classes: {
@@ -384,7 +383,7 @@ const Register = () => {
                 htmlFor="confirmPassword"
                 style={{
                   fontFamily: "Nunito",
-                  fontSize: "12px",
+                  fontSize: "14px",
                   fontWeight: 700,
                   color: "#fff",
                   display: "block",
@@ -414,7 +413,7 @@ const Register = () => {
                     width: "350.18px",
                     marginLeft: "10px",
                     fontFamily: "Nunito",
-                    fontSize: "12px",
+                    fontSize: "14px",
                     marginBottom: "16px",
                   },
                   endAdornment: (
@@ -440,22 +439,23 @@ const Register = () => {
               />
             </Grid>
           </Grid>
-        </div>
+        
         <Grid item xs={12} style={{ order: 3 }}>
           <Button
             type="submit"
             variant="contained"
             className="submit"
             style={{
-              borderRadius: "20px",
-              backgroundColor: "#0D0D0D",
-              padding: "15px",
-              fontSize: "18px",
+              borderRadius: "15px",
+              background: "none",
+              padding: "10px",
+              fontSize: "20px",
               color: "#6236C0",
-              borderColor: "#6236C0",
-              width: "363px",
-              fontFamily: "Nunito",
+              border: "2px solid #6236C0",
+              width: "300px",
+              fontFamily: "'Orbitron', sans-serif",
               marginBottom: "16px",
+              marginTop : "20px"
             }}
           >
             Register
@@ -466,18 +466,19 @@ const Register = () => {
             style={{
               color: "#fff",
               marginTop: "16px",
-              marginBottom: "16px",
             }}
           >
             Already registered?{" "}
             <Link
               to="/login"
+              className="link_to_login"
               style={{ color: "#06F8DB", textDecoration: "none" }}
             >
-              Click here to log in.
+              Click Here to Login.
             </Link>
           </Typography>
         </Grid>
+        </div>
       </FormControl>
     </Box>
   );

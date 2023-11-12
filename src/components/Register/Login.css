@@ -4,13 +4,13 @@
     font-weight: 400;
     font-family: 'Orbitron', sans-serif;
     line-height: 80.26px;
-    margin-top: 100px;
+    margin-top: 5rem;
     text-align: center;
 }
 
 .form-label {
     font-family: "Nunito";
-    font-size: 12px;
+    font-size: 15px !important;
     font-weight: 700;
     color: #fff;
     display: block;
@@ -19,9 +19,14 @@
     margin: 10px;
 }
 
-
 .outlined-input {
     border-color: #06F8DB !important;
 }
 
+#form_id{
+    margin-bottom: 2rem;
+}
 
+.submit:hover{
+    background-color: #6236C0;
+}

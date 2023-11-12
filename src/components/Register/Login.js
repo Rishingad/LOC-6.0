@@ -44,144 +44,146 @@ const Login = () => {
     >
       <h1 className="form-title">Login</h1>
       <FormControl onSubmit={handleSubmit}>
-        <Grid
-          container
-          spacing={2}
-          justifyContent="center"
-          alignItems="center"
-          sx={{
-            width: "80%", // Adjust the width of the form container
-            maxWidth: "400px", // Set a maximum width for responsiveness
-            margin: "auto", // Center the form horizontally
-          }}
-        >
-          <Grid item xs={12}>
-            <label
-              className="form-label"
-              htmlFor="email"
-              style={{
-                fontFamily: "Nunito",
-                fontSize: "12px",
-                fontWeight: 700,
-                color: "#fff",
-                display: "block",
-                marginBottom: "4px",
-              }}
-            >
-              Email
-            </label>
-            <TextField
-              type="email"
-              id="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              placeholder="abc@example.com"
-              fullWidth
-              variant="outlined"
-              InputProps={{
-                style: {
-                  borderRadius: "20px",
-                  padding: "10px", // Adjust padding
-                  boxSizing: "border-box",
+        <div className="form">
+          <Grid
+            container
+            spacing={2}
+            justifyContent="center"
+            alignItems="center"
+            sx={{
+              width: "80%", 
+              maxWidth: "400px", 
+              margin: "auto", 
+            }}
+          >
+            <Grid item xs={12}>
+              <label
+                className="form-label"
+                htmlFor="email"
+                style={{
+                  fontFamily: "Nunito",
+                  fontSize: "12px",
+                  fontWeight: 700,
                   color: "#fff",
-                  backgroundColor: "#0D0D0D",
-                  height: "45px", // Adjust height
-                },
-                classes: {
-                  notchedOutline: "outlined-input",
-                },
-              }}
-            />
-          </Grid>
-
-          <Grid item xs={12}>
-            <label
-              className="form-label"
-              htmlFor="password"
-              style={{
-                fontFamily: "Nunito",
-                fontSize: "12px",
-                fontWeight: 700,
-                color: "#fff",
-                display: "block",
-                marginBottom: "4px",
-              }}
-            >
-              Password
-            </label>
-            <TextField
-              type={showPassword ? "text" : "password"}
-              id="confirmPassword"
-              name="confirmPassword"
-              value={formData.showPassword}
-              onChange={handleChange}
-              placeholder="Enter your password"
-              fullWidth
-              variant="outlined"
-              InputProps={{
-                style: {
-                  borderRadius: "20px",
-                  padding: "10px", // Adjust padding
-                  boxSizing: "border-box",
-                  color: "#fff",
-                  backgroundColor: "#0D0D0D",
-                  height: "45px", // Adjust height
-                },
-                classes: {
-                  notchedOutline: "outlined-input",
-                },
-                endAdornment: (
-                  <InputAdornment position="end">
-                    <IconButton
-                      onClick={() => setShowPassword(!showPassword)}
-                      style={{ color: "#fff" }}
-                    >
-                      {showPassword ? <VisibilityOff /> : <Visibility />}
-                    </IconButton>
-                  </InputAdornment>
-                ),
-              }}
-            />
-          </Grid>
-
-          <Grid item xs={12}>
-            <Button
-              type="submit"
-              variant="contained"
-              className="submit"
-              style={{
-                borderRadius: "20px",
-                backgroundColor: "#0D0D0D",
-                padding: "12px", // Adjust padding
-                fontSize: "14px", // Adjust font size
-                color: "#6236C0",
-                borderColor: "#6236C0",
-                width: "100%", // Adjust width
-                fontFamily: "Nunito",
-                marginTop: "16px",
-              }}
-            >
-              Register
-            </Button>
-            <Typography
-              variant="subtitle1"
-              className="text"
-              style={{
-                color: "#fff",
-                marginTop: "16px",
-              }}
-            >
-              Don't have an account?{" "}
-              <Link
-                to="/register"
-                style={{ color: "#06F8DB", textDecoration: "none" }}
+                  display: "block",
+                  marginBottom: "4px",
+                }}
               >
-                Click here to register.
-              </Link>
-            </Typography>
+                Email
+              </label>
+              <TextField
+                type="email"
+                id="mail"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                placeholder="abc@example.com"
+                fullWidth
+                variant="outlined"
+                InputProps={{
+                  style: {
+                    borderRadius: "20px",
+                    padding: "10px", 
+                    boxSizing: "border-box",
+                    color: "#fff",
+                    backgroundColor: "#0D0D0D",
+                    height: "45px", 
+                  },
+                  classes: {
+                    notchedOutline: "outlined-input",
+                  },
+                }}
+              />
+            </Grid>
+
+            <Grid item xs={12}>
+              <label
+                className="form-label"
+                htmlFor="password"
+                style={{
+                  fontFamily: "Nunito",
+                  fontSize: "12px",
+                  fontWeight: 700,
+                  color: "#fff",
+                  display: "block",
+                  marginBottom: "4px",
+                }}
+              >
+                Password
+              </label>
+              <TextField
+                type={showPassword ? "text" : "password"}
+                id="confirmPassword"
+                name="confirmPassword"
+                value={formData.showPassword}
+                onChange={handleChange}
+                placeholder="Enter your password"
+                fullWidth
+                variant="outlined"
+                InputProps={{
+                  style: {
+                    borderRadius: "20px",
+                    padding: "10px", 
+                    boxSizing: "border-box",
+                    color: "#fff",
+                    backgroundColor: "#0D0D0D",
+                    height: "45px", 
+                  },
+                  classes: {
+                    notchedOutline: "outlined-input",
+                  },
+                  endAdornment: (
+                    <InputAdornment position="end">
+                      <IconButton
+                        onClick={() => setShowPassword(!showPassword)}
+                        style={{ color: "#fff" }}
+                      >
+                        {showPassword ? <VisibilityOff /> : <Visibility />}
+                      </IconButton>
+                    </InputAdornment>
+                  ),
+                }}
+              />
+            </Grid>
+
+            <Grid item xs={12}>
+              <Button
+                type="submit"
+                variant="contained"
+                className="submit"
+                style={{
+                  borderRadius: "10px",
+                  background: "none",
+                  padding: "8px 20px", 
+                  fontSize: "17px",
+                  color: "#6236C0",
+                  border: "2px solid #6236C0",
+                  width: "60%", 
+                  fontFamily: "Nunito",
+                  marginTop: "16px",
+                }}
+              >
+                Register
+              </Button>
+              <Typography
+                variant="subtitle1"
+                className="text"
+                style={{
+                  color: "#fff",
+                  marginTop: "16px",
+                }}
+              >
+                Don't have an account?{" "}
+                <Link
+                  to="/register"
+                  style={{ color: "#06F8DB", textDecoration: "none" }}
+                >
+                  Click Here to Register.
+                </Link>
+              </Typography>
+            </Grid>
           </Grid>
-        </Grid>
+        </div>
       </FormControl>
     </Box>
   );

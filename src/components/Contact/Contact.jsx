@@ -22,29 +22,29 @@ const Contact = () => {
                 <h1 className="head">CONTACT US</h1>
             </div>
             <div className="main_form">
-                <form ref={form} onSubmit={sendEmail}>
+                <form ref={form} className='form' onSubmit={sendEmail}>
                     <div className="first">
                         <div className="name">
-                            <label htmlFor="name">First name</label>
+                            <label className='labels' htmlFor="name">First name</label>
                             <input name='first' placeholder='John' type="text" id="name" required />
                         </div>
                         <div className="email">
-                            <label htmlFor="email">Last name</label>
+                            <label className='labels' htmlFor="email">Last name</label>
                             <input name='last' placeholder='Smith' type="text" id="email" required />
                         </div>
                     </div>
                     <div className="second">
                         <div className="nation">
-                            <label htmlFor="nation">Contact Number</label>
+                            <label className='labels' htmlFor="nation">Contact Number</label>
                             <input name='contact' placeholder='+91 9876543210' type="text" id="nation" required />
                         </div>
                         <div className="phone">
-                            <label htmlFor="phone">Email</label>
+                            <label className='labels' htmlFor="phone">Email</label>
                             <input name='email' placeholder='abc@gmail.com' type="email" id="phone" required />
                         </div>
                     </div>
                     <div className="msg">
-                        <label htmlFor="name">Message</label>
+                        <label className='labels' htmlFor="name">Message</label>
                         <textarea name='msg' id="msg" rows="5" cols="30" required ></textarea>
                     </div>
                     <div className="btn">

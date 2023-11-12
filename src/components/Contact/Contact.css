@@ -13,7 +13,7 @@
     align-items: center;
 }
 
-form {
+.form {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -22,7 +22,7 @@ form {
     border-radius: 40px;
     padding: 2rem 5rem;
     transition: all 0.3s ease-in-out;
-    background: linear-gradient(to right bottom , rgba(4, 235, 208, 0.046) , black);
+    background: linear-gradient(to right bottom, rgba(4, 235, 208, 0.046), black);
 }
 
 .name,
@@ -43,23 +43,11 @@ form {
 #phone,
 #nation,
 #msg {
-    padding: 10px;
+    padding: 10px 20px;
     font-size: 25px;
     color: white;
-    border: 1px solid #06F8DB;
-}
-
-label {
-    margin-bottom: 15px;
-    letter-spacing: 0.1rem;
-    font-family: 'Nunito Sans', sans-serif;
-    color: white;
-}
-
-input,
-textarea {
     font-size: 22px;
-    width: 20vw;
+    width: 19vw;
     background: none;
     border: none;
     box-shadow: 0px 0px 5px 0px #06f8dc2a;
@@ -67,7 +55,14 @@ textarea {
     border-radius: 15px;
 }
 
-textarea {
+.labels {
+    margin-bottom: 15px;
+    letter-spacing: 0.1rem;
+    font-family: 'Nunito Sans', sans-serif;
+    color: white;
+}
+
+#msg {
     width: 47vw;
     border-radius: 20px;
 }
@@ -86,7 +81,7 @@ textarea {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 60px;   
+    margin-top: 60px;
 }
 
 .name,
@@ -95,8 +90,8 @@ textarea {
 }
 
 .send {
-    padding: 10px 8rem;
-    font-size: 1.2rem;
+    padding: 10px 6rem;
+    font-size: 1.4rem;
     border-radius: 10px;
     cursor: pointer;
     margin-top: -5px;
@@ -129,33 +124,41 @@ textarea {
         margin-right: 2rem;
     }
 
-    input{
+    #name,
+    #email,
+    #phone,
+    #nation,
+    #msg {
         width: 30vw;
     }
 
-    form{
-        padding: 2rem ;
+    .form {
+        padding: 2rem;
     }
 }
 
 @media screen and (max-width:500px) {
+
     .name,
     .nation {
         margin-right: 0.5rem;
     }
-    label{
+
+    .labels {
         font-size: 15px;
     }
 }
 
 @media screen and (max-width:450px) {
-    form{
+    .form {
         padding: 1rem;
     }
-    .send{
+
+    .send {
         padding: 1rem 5rem;
     }
-    .head{
+
+    .head {
         font-size: 2rem;
     }
 }
