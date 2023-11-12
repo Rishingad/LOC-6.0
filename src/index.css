@@ -9,7 +9,21 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #000;
 }
+@font-face {
+  font-family: "Nico Moji";
+  src: url("./assets/fonts/NicoMoji-Regular.ttf") format("truetype");
+  /* Add additional font formats here for better compatibility */
+  font-weight: normal;
+  font-style: normal;
+}
 
+@font-face {
+  font-family: "Nico Moji";
+  src: url("./assets/fonts/NicoMoji-Regular.ttf") format("truetype");
+  /* Add additional font formats here for better compatibility */
+  font-weight: bold;
+  font-style: normal;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -25,6 +39,6 @@ code {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #06f8db; 
+  background: #06f8db;
   border-radius: 5px;
 }

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Logo from "../../assets/images/logo-whitw.png";
 import "./Navbar.css";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -11,28 +11,45 @@ const Navbar = () => {
     console.log(isMenuOpen);
     setIsMenuOpen((state) => !state);
   }
+
+
+  const [scrollPosition, setScrollPosition] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollPosition(window.scrollY);
+      console.log(window.screenX);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${scrollPosition > 400 ? 'navbar-fill' : ''}`}>
       <a href="/">
-        <img src={Logo} height={80} width={90} alt=""></img>
+        <img src={Logo} height={70} width={90} alt=""></img>
       </a>
       <ul className={`nav-menu ${isMenuOpen ? "menu-show" : ""}`}>
-        <li className="cursor-pointer">
+        <li className="cursor-pointer menu-item">
           <a href={"#about"}>About</a>
         </li>
-        <li className="cursor-pointer">
+        <li className="cursor-pointer menu-item">
           <a href={"#domain"}>Domains</a>
         </li>
         <li className="cursor-pointer">
           <a href={"#prize"}>Prizes</a>
         </li>
-        <li className="cursor-pointer">
+        <li className="cursor-pointer menu-item">
           <a href={"#faq"}>FAQs</a>
         </li>
-        <li className="cursor-pointer">
+        <li className="cursor-pointer menu-item">
           <a href={"#contact"}>Contact Us</a>
         </li>
-        <li className="cursor-pointer">
+        <li className="cursor-pointer menu-item">
           <a href={"/register"}>Register Now</a>
         </li>
         {!isMenuOpen ? null : (
