@@ -9,11 +9,14 @@ import {
   FormControl,
   Typography,
 } from "@mui/material";
-import { Link } from "react-router-dom";
 import { Visibility, VisibilityOff } from "@mui/icons-material";
 import "./Login.css";
+import axios from "axios";
+import { IP } from "../../constant";
+import { toast } from "react-toastify";
+import PropTypes from "prop-types";
 
-const Login = () => {
+export default function Login({ setToken }) {
   const [formData, setFormData] = useState({
     email: "",
     confirmPassword: "",
@@ -25,10 +28,20 @@ const Login = () => {
     setFormData({ ...formData, [event.target.name]: event.target.value });
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    // Add your form submission logic here
-    console.log("Form data submitted:", formData);
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post(`${IP}/auth/login`, {
+        email: formData.email,
+        password: formData.confirmPassword,
+      });
+      console.log("Login successful", response.data);
+      toast.success("Login Successfull");
+      setToken(response.data.token);
+    } catch (error) {
+      console.error("Login failed", error.data);
+      toast.error("Login Failed");
+    }
   };
 
   return (
@@ -51,9 +64,9 @@ const Login = () => {
             justifyContent="center"
             alignItems="center"
             sx={{
-              width: "80%", 
-              maxWidth: "400px", 
-              margin: "auto", 
+              width: "80%",
+              maxWidth: "400px",
+              margin: "auto",
             }}
           >
             <Grid item xs={12}>
@@ -83,11 +96,11 @@ const Login = () => {
                 InputProps={{
                   style: {
                     borderRadius: "20px",
-                    padding: "10px", 
+                    padding: "10px",
                     boxSizing: "border-box",
                     color: "#fff",
                     backgroundColor: "#0D0D0D",
-                    height: "45px", 
+                    height: "45px",
                   },
                   classes: {
                     notchedOutline: "outlined-input",
@@ -123,11 +136,11 @@ const Login = () => {
                 InputProps={{
                   style: {
                     borderRadius: "20px",
-                    padding: "10px", 
+                    padding: "10px",
                     boxSizing: "border-box",
                     color: "#fff",
                     backgroundColor: "#0D0D0D",
-                    height: "45px", 
+                    height: "45px",
                   },
                   classes: {
                     notchedOutline: "outlined-input",
@@ -154,14 +167,15 @@ const Login = () => {
                 style={{
                   borderRadius: "10px",
                   background: "none",
-                  padding: "8px 20px", 
+                  padding: "8px 20px",
                   fontSize: "17px",
                   color: "#6236C0",
                   border: "2px solid #6236C0",
-                  width: "60%", 
+                  width: "60%",
                   fontFamily: "Nunito",
                   marginTop: "16px",
                 }}
+                onClick={handleSubmit}
               >
                 Register
               </Button>
@@ -174,12 +188,9 @@ const Login = () => {
                 }}
               >
                 Don't have an account?{" "}
-                <Link
-                  to="/register"
-                  style={{ color: "#06F8DB", textDecoration: "none" }}
-                >
-                  Click Here to Register.
-                </Link>
+                <a href="/register" className="link-style">
+                  Click Here to Register
+                </a>
               </Typography>
             </Grid>
           </Grid>
@@ -187,6 +198,8 @@ const Login = () => {
       </FormControl>
     </Box>
   );
-};
+}
 
-export default Login;
+Login.propTypes = {
+  setToken: PropTypes.func.isRequired,
+};

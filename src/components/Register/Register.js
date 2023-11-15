@@ -8,12 +8,16 @@ import {
   Box,
   FormControl,
   Typography,
+  Select,
+  MenuItem,
 } from "@mui/material";
-import { Link } from "react-router-dom";
 import { Visibility, VisibilityOff } from "@mui/icons-material";
 import "./Login.css";
-
-const Register = () => {
+import axios from "axios";
+import { IP } from "../../constant";
+import { toast } from "react-toastify";
+import PropTypes from "prop-types";
+export default function Register({ setToken }) {
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -24,20 +28,29 @@ const Register = () => {
     password: "",
     confirmPassword: "",
   });
-
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-
   const handleChange = (event) => {
     setFormData({ ...formData, [event.target.name]: event.target.value });
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    // Form Submission Logic
-    console.log("Form data submitted:", formData);
+  const handleSubmit = async () => {
+    try {
+      const response = await axios.post(`${IP}/auth/register`, {
+        email: formData.email,
+        password: formData.password,
+        firstName: formData.firstName,
+        lastName: formData.lastName,
+      });
+      console.log("Registration successful", response.data);
+      toast.success("Registration Successful");
+      setToken(response.data.token);
+      // Handle success response and store the token if needed
+    } catch (error) {
+      console.error("Registration failed", error);
+      toast.error("Registration Failed");
+    }
   };
-
   return (
     <Box
       sx={{
@@ -52,11 +65,7 @@ const Register = () => {
       <h1 className="form-title">Register Now</h1>
       <FormControl onSubmit={handleSubmit}>
         <div id="form_id" className="form">
-          <Grid
-            container
-            spacing={8}
-            justifyContent="space-between"
-          >
+          <Grid container spacing={8} justifyContent="space-between">
             <Grid item xs={12} sm={6} style={{ order: 1 }}>
               <label
                 className="form-label"
@@ -161,34 +170,34 @@ const Register = () => {
               >
                 Graduation Year
               </label>
-              <TextField
-                type="text"
+
+              <Select
                 id="graduationYear"
                 name="graduationYear"
                 value={formData.graduationYear}
                 onChange={handleChange}
-                placeholder="2022"
                 fullWidth
                 variant="outlined"
-                InputProps={{
-                  style: {
-                    borderRadius: "20px",
-                    padding: "12px",
-                    boxSizing: "border-box",
-                    color: "#fff",
-                    backgroundColor: "#0D0D0D",
-                    height: "55px",
-                    width: "350.18px",
-                    marginLeft: "10px",
-                    fontFamily: "Nunito",
-                    fontSize: "14px",
-                    marginBottom: "16px",
-                  },
-                  classes: {
-                    notchedOutline: "outlined-input",
-                  },
+                className="outlined-input"
+                style={{
+                  borderRadius: "20px",
+                  boxSizing: "border-box",
+                  color: "#fff",
+                  backgroundColor: "#0D0D0D",
+                  height: "55px",
+                  width: "350.18px",
+                  marginLeft: "10px",
+                  fontFamily: "Nunito",
+                  fontSize: "14px",
+                  marginBottom: "16px",
+                  borderColor: "#06F8DB",
                 }}
-              />
+              >
+                <MenuItem value={2023}>2023</MenuItem>
+                <MenuItem value={2024}>2024</MenuItem>
+                <MenuItem value={2025}>2025</MenuItem>
+                <MenuItem value={2026}>2026</MenuItem>
+              </Select>
 
               <label
                 className="form-label"
@@ -439,49 +448,49 @@ const Register = () => {
               />
             </Grid>
           </Grid>
-        
-        <Grid item xs={12} style={{ order: 3 }}>
-          <Button
-            type="submit"
-            variant="contained"
-            className="submit"
-            style={{
-              borderRadius: "15px",
-              background: "none",
-              padding: "10px",
-              fontSize: "20px",
-              color: "#6236C0",
-              border: "2px solid #6236C0",
-              width: "300px",
-              fontFamily: "'Orbitron', sans-serif",
-              marginBottom: "16px",
-              marginTop : "20px"
-            }}
-          >
-            Register
-          </Button>
-          <Typography
-            variant="subtitle1"
-            className="text"
-            style={{
-              color: "#fff",
-              marginTop: "16px",
-            }}
-          >
-            Already registered?{" "}
-            <Link
-              to="/login"
-              className="link_to_login"
-              style={{ color: "#06F8DB", textDecoration: "none" }}
+
+          <Grid item xs={12} style={{ order: 3 }}>
+            <Button
+              type="submit"
+              variant="contained"
+              className="submit"
+              style={{
+                borderRadius: "15px",
+                background: "none",
+                padding: "10px",
+                fontSize: "20px",
+                color: "#6236C0",
+                border: "2px solid #6236C0",
+                width: "300px",
+                fontFamily: "'Orbitron', sans-serif",
+                marginBottom: "16px",
+                marginTop: "20px",
+                onClick: { handleSubmit },
+              }}
+              onClick={handleSubmit}
             >
-              Click Here to Login.
-            </Link>
-          </Typography>
-        </Grid>
+              Register
+            </Button>
+            <Typography
+              variant="subtitle1"
+              className="text"
+              style={{
+                color: "#fff",
+                marginTop: "16px",
+              }}
+            >
+              Already registered?{" "}
+              <a href={"/login"} className="link-style">
+                Login here
+              </a>
+            </Typography>
+          </Grid>
         </div>
       </FormControl>
     </Box>
   );
-};
+}
 
-export default Register;
+Register.propTypes = {
+  setToken: PropTypes.func.isRequired,
+};

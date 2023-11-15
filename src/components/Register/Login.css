@@ -19,9 +19,10 @@
     margin: 10px;
 }
 
-.outlined-input {
+div .outlined-input {
     border-color: #06F8DB !important;
 }
+
 
 #form_id{
     margin-bottom: 2rem;
@@ -29,4 +30,8 @@
 
 .submit:hover{
     background-color: #6236C0;
+}
+.link-style{
+   color: #06F8DB; 
+   text-decoration: none;
 }
