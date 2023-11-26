@@ -17,7 +17,9 @@ import axios from "axios";
 import { IP } from "../../constant";
 import { toast } from "react-toastify";
 import PropTypes from "prop-types";
+import { useNavigate } from "react-router-dom";
 export default function Register({ setToken }) {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -45,6 +47,7 @@ export default function Register({ setToken }) {
       console.log("Registration successful", response.data);
       toast.success("Registration Successful");
       setToken(response.data.token);
+      navigate("/home");
       // Handle success response and store the token if needed
     } catch (error) {
       console.error("Registration failed", error);

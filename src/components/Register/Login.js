@@ -15,13 +15,13 @@ import axios from "axios";
 import { IP } from "../../constant";
 import { toast } from "react-toastify";
 import PropTypes from "prop-types";
-
+import { useNavigate } from "react-router-dom";
 export default function Login({ setToken }) {
   const [formData, setFormData] = useState({
     email: "",
     confirmPassword: "",
   });
-
+  const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
 
   const handleChange = (event) => {
@@ -38,6 +38,7 @@ export default function Login({ setToken }) {
       console.log("Login successful", response.data);
       toast.success("Login Successfull");
       setToken(response.data.token);
+      navigate("/home");
     } catch (error) {
       console.error("Login failed", error.data);
       toast.error("Login Failed");
