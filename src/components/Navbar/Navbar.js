@@ -5,15 +5,21 @@ import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+  const token = sessionStorage.getItem("token");
   function menuHandler() {
     console.log("click");
     console.log(isMenuOpen);
     setIsMenuOpen((state) => !state);
   }
 
-
   const [scrollPosition, setScrollPosition] = useState(0);
+  const loginButtonHandler = () => {
+    if (token) {
+      sessionStorage.removeItem("token");
+    } else {
+      sessionStorage.removeItem("token");
+    }
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,15 +27,15 @@ const Navbar = () => {
       console.log(window.screenX);
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   return (
-    <nav className={`navbar ${scrollPosition > 400 ? 'navbar-fill' : ''}`}>
+    <nav className={`navbar ${scrollPosition > 400 ? "navbar-fill" : ""}`}>
       <a href="/">
         <img src={Logo} height={70} width={90} alt=""></img>
       </a>
@@ -50,8 +56,11 @@ const Navbar = () => {
           <a href={"#contact"}>Contact Us</a>
         </li>
         <li className="cursor-pointer menu-item">
-          <a href={"/register"}>Register Now</a>
+          <a href={"/register"} onClick={loginButtonHandler}>
+            {token ? "Logout" : "Register Now"}
+          </a>
         </li>
+
         {!isMenuOpen ? null : (
           <CloseIcon
             onClick={menuHandler}
