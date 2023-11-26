@@ -7,6 +7,7 @@ import Sponsor from "../Sponsor/Sponsor";
 import FAQ from "../FAQ/Faq";
 import Contact from "../Contact/Contact";
 import Prizes from "../Prizes/Prizes"
+import Competitions from "../Carousel/Competition";
 
 const Hero = () => {
   return (
@@ -21,6 +22,7 @@ const Hero = () => {
       <Domain></Domain>
       <Prizes></Prizes>
       <Partner></Partner>
+      {/* <Competitions /> */}
       <Sponsor></Sponsor>
       <FAQ></FAQ>
       <Contact></Contact>

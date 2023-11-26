@@ -1,8 +1,6 @@
-/* Carousel.css */
-.carousel-container {
+/* .carousel-container {
     position: relative;
     max-width: 600px;
-    /* Adjust the maximum width as needed */
     margin: 0 auto;
     overflow: hidden;
 }
@@ -46,4 +44,76 @@
     background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
     backdrop-filter: blur(4px);
     color: white;
+} */
+
+body {
+    overflow-x: hidden;
+}
+
+.carousel_section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 6rem;
+    height: 70vh;
+    margin-bottom: 15rem;
+}
+
+/* .slick-prev{
+    left: 25px;
+    z-index: 10;
+} */
+
+.inner_carrousel {
+    margin-top: 2rem;
+}
+
+.img_carousel {
+    height: 70vh;
+    width: 45vw;
+}
+
+.carousel_head {
+    font-size: 3rem;
+    margin: 1rem;
+    color: white;
+    text-align: center;
+}
+
+.carousel_text {
+    width: 25vw;
+    text-align: center;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.section2 {
+    text-align: center;
+}
+
+@media only screen and (max-width: 1500px) {
+    .img_carousel {
+        height: 60vh;
+        width: 45vw;
+    }
+}
+
+@media only screen and (max-width: 1250px) {
+    .img_carousel {
+        height: 45vh;
+        width: 45vw;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .img_carousel {
+        height: 35vh;
+        width: 55vw;
+    }
+}
+
+@media only screen and (max-width: 1400px) {
+    .carousel_head {
+        font-size: 2.2rem;
+    }
 }

@@ -1,3 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.slick-slide>div {
+  margin: 0 52px;
+}
+
+.slick-dots li.slick-active button:before {
+  color: orange !important;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -9,6 +22,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #000;
 }
+
 @font-face {
   font-family: "Nico Moji";
   src: url("./assets/fonts/NicoMoji-Regular.ttf") format("truetype");
@@ -24,6 +38,7 @@ body {
   font-weight: bold;
   font-style: normal;
 }
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;

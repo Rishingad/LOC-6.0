@@ -112,7 +112,7 @@ function Footer() {
                 <br />
                 <br />
                 Visit us at{" "}
-                <Link style={{ color: "#06F8DB" }}>https://djacm.co/</Link>
+                <a href="https://djacm.co" style={{ color: "#06F8DB" }}>https://djacm.co/</a>
               </Typography>
             </Box>
           </Grid>
