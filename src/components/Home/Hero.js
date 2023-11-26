@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Hero.css";
 import About from "../About/About"
 import Domain from "../Domain/Domain"
@@ -8,8 +8,33 @@ import FAQ from "../FAQ/Faq";
 import Contact from "../Contact/Contact";
 import Prizes from "../Prizes/Prizes"
 import Competitions from "../Carousel/Competition";
+import { FaArrowCircleUp } from "react-icons/fa";
 
 const Hero = () => {
+
+  const scrollTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
+  const [ visible, setVisible ] = useState(false);
+  const handleScroll = () => {
+    if (window.scrollY > 70) {
+      setVisible(true);
+    } 
+    else {
+      setVisible(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
   return (
     <>
       <div className="home-section">
@@ -22,10 +47,17 @@ const Hero = () => {
       <Domain></Domain>
       <Prizes></Prizes>
       <Partner></Partner>
-      {/* <Competitions /> */}
       <Sponsor></Sponsor>
+      <Competitions />
       <FAQ></FAQ>
       <Contact></Contact>
+      {
+        visible && (<div className="top">
+          <button onClick={scrollTop} className="btn_top">
+            {<FaArrowCircleUp className="custom_icon2" />}
+          </button>
+        </div>)
+      }
     </>
   );
 };

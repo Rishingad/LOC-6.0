@@ -223,108 +223,165 @@
 
 
 
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import { useEffect, useRef, useState } from "react";
+// import Slider from "react-slick";
+// import "slick-carousel/slick/slick.css";
+// import "slick-carousel/slick/slick-theme.css";
+// import { useEffect, useRef, useState } from "react";
+// import "./Carousel.css"
+
+
+// function Carousel() {
+
+//   const [slidesToShow, setSlidesToShow] = useState(3);
+
+//   const updateSlidesToShow = () => {
+//     if (window.innerWidth < 850) {
+//       setSlidesToShow(2);
+//     }
+//     else if (window.innerWidth < 600 && window.innerWidth > 850) {
+//       setSlidesToShow(1);
+//     }
+//     else {
+//       setSlidesToShow(3);
+//     }
+//   };
+
+//   useEffect(() => {
+//     updateSlidesToShow();
+
+//     window.addEventListener('resize', updateSlidesToShow);
+
+//     return () => {
+//       window.removeEventListener('resize', updateSlidesToShow);
+//     };
+//   }, []);
+
+
+//   const sliderRef = useRef(null);
+
+//   useEffect(() => {
+//     const intervalId = setInterval(() => {
+//       if (sliderRef.current) {
+//         sliderRef.current.slickNext();
+//       }
+//     }, 3000);
+
+//     return () => clearInterval(intervalId);
+//   }, []);
+//   const settings = {
+//     dots: true,
+//     infinite: true,
+//     speed: 600,
+//     slidesToShow: slidesToShow,
+//     slidesToScroll: 1
+//   };
+//   return (
+//     <div className='main_carousel'>
+//       <div className="inner_carousel">
+//         <Slider ref={sliderRef} {...settings}>
+//           {data.map((d) => (
+//             <div key={d.name} className="carousel_section">
+//               <div className='flex justify-center items-center rounded-t-xl'>
+//                 <img src={d.img} alt="" className="img_carousel" />
+//               </div>
+
+//               <div className="section2 flex flex-col items-center justify-center gap-4 p-4">
+//                 <p className="carousel_head text-xl font-semibold">{d.name}</p>
+//                 <p className="carousel_text text-center text-xl">{d.review}</p>
+//               </div>
+//             </div>
+//           ))}
+//         </Slider>
+//       </div>
+
+//     </div>
+//   );
+// }
+
+// const data = [
+//   {
+//     name: `John Morgan`,
+//     img: require('../../assets/images/img1.png'),
+//     review: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`
+//   },
+//   {
+//     name: `Ellie Anderson`,
+//     img: require('../../assets/images/img1.png'),
+//     review: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`
+//   },
+//   {
+//     name: `Nia Adebayo`,
+//     img: require('../../assets/images/img1.png'),
+//     review: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`
+//   },
+//   {
+//     name: `Rigo Louie`,
+//     img: require('../../assets/images/img1.png'),
+//     review: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`
+//   },
+//   {
+//     name: `Mia Williams`,
+//     img: require('../../assets/images/img1.png'),
+//     review: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`
+//   },
+
+// ];
+
+// export default Carousel;
+
+
+import React from 'react'
+import Carousel , { consts } from "react-elastic-carousel";
 import "./Carousel.css"
+import { FaArrowCircleRight , FaArrowCircleLeft } from "react-icons/fa";
 
 
-function Carousel() {
-
-  const [slidesToShow, setSlidesToShow] = useState(3);
-
-  const updateSlidesToShow = () => {
-    if (window.innerWidth < 850) {
-      setSlidesToShow(2);
-    }
-    else if (window.innerWidth < 600 && window.innerWidth > 850) {
-      setSlidesToShow(1);
-    }
-    else {
-      setSlidesToShow(3);
-    }
-  };
-
-  useEffect(() => {
-    updateSlidesToShow();
-
-    window.addEventListener('resize', updateSlidesToShow);
-
-    return () => {
-      window.removeEventListener('resize', updateSlidesToShow);
-    };
-  }, []);
-
-
-  const sliderRef = useRef(null);
-
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      if (sliderRef.current) {
-        sliderRef.current.slickNext();
-      }
-    }, 3000);
-
-    return () => clearInterval(intervalId);
-  }, []);
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 600,
-    slidesToShow: slidesToShow,
-    slidesToScroll: 1
-  };
-  return (
-    <div className='main_carousel'>
-      <div className="inner_carousel">
-        <Slider ref={sliderRef} {...settings}>
-          {data.map((d) => (
-            <div key={d.name} className="carousel_section">
-              <div className='flex justify-center items-center rounded-t-xl'>
-                <img src={d.img} alt="" className="img_carousel" />
-              </div>
-
-              <div className="section2 flex flex-col items-center justify-center gap-4 p-4">
-                <p className="carousel_head text-xl font-semibold">{d.name}</p>
-                <p className="carousel_text text-center text-xl">{d.review}</p>
-              </div>
-            </div>
-          ))}
-        </Slider>
-      </div>
-
-    </div>
-  );
-}
-
-const data = [
-  {
-    name: `John Morgan`,
-    img: require('../../assets/images/img1.png'),
-    review: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`
-  },
-  {
-    name: `Ellie Anderson`,
-    img: require('../../assets/images/img1.png'),
-    review: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`
-  },
-  {
-    name: `Nia Adebayo`,
-    img: require('../../assets/images/img1.png'),
-    review: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`
-  },
-  {
-    name: `Rigo Louie`,
-    img: require('../../assets/images/img1.png'),
-    review: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`
-  },
-  {
-    name: `Mia Williams`,
-    img: require('../../assets/images/img1.png'),
-    review: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`
-  },
-
+const breakPoints = [
+  { width: 1, itemsToShow: 1 },
+  { width: 550, itemsToShow: 2 },
+  { width: 1500, itemsToShow: 2 },
 ];
 
-export default Carousel;
+const myArrow = ({ type, onClick, isEdge }) => {
+  const pointer = type === consts.PREV ? <FaArrowCircleRight className='custom_icon' />  : <FaArrowCircleLeft className='custom_icon' />
+  return (
+    <button onClick={onClick} disabled={isEdge}>
+      {pointer}
+    </button>
+  )
+}
+
+const CarouselMain = () => {
+  const settings = {
+    pagination: true,
+    isRTL: true,
+  };
+
+  const items = [
+    { id: 1, content: 'Tech-Event 8', img: require('../../assets/images/img1.png') },
+    { id: 2, content: 'Tech-Event 7', img: require('../../assets/images/img1.png') },
+    { id: 3, content: 'Tech-Event 6', img: require('../../assets/images/img1.png') },
+    { id: 4, content: 'Tech-Event 5', img: require('../../assets/images/img1.png') },
+    { id: 5, content: 'Tech-Event 4', img: require('../../assets/images/img1.png') },
+    { id: 6, content: 'Tech-Event 3', img: require('../../assets/images/img1.png') },
+    { id: 7, content: 'Tech-Event 2', img: require('../../assets/images/img1.png') },
+    { id: 8, content: 'Tech-Event 1', img: require('../../assets/images/img1.png') },
+  ]
+  return (
+    <>
+      <h1 className='carousel_head'>Glimpse of LOC 5.0</h1>
+      <div className="carousel_elastic">
+        <Carousel renderArrow = {myArrow} {...settings} breakPoints={breakPoints}>
+          {items.map((item) => (
+            <div className='item_set' key={item.id}>
+              <img className='item_img' src={item.img} alt="" />
+              <h2 className='item_head'>{item.content}</h2>
+            </div>
+          ))}
+        </Carousel>
+      </div>
+    </>
+  )
+}
+
+export default CarouselMain

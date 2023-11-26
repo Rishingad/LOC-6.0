@@ -127,8 +127,8 @@
     #name,
     #email,
     #phone,
-    #nation,
-    #msg {
+    #nation
+    {
         width: 30vw;
     }
 

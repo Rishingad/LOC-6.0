@@ -1,8 +1,8 @@
-import Carousel from "./Carousel"
+import CarouselMain from "./Carousel"
 
 const Competitions = () => {
     return (
-        <Carousel />
+        <CarouselMain />
     );
 };
 
