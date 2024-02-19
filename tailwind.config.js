@@ -2,7 +2,11 @@
 export default {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        bakbak: ["Bakbak One", "sans-serif"],
+      },
+    },
   },
   plugins: [],
 };
