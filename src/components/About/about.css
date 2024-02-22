@@ -4,6 +4,9 @@ body{
     background-color:rgba(4, 11, 17, 1);
     margin: 0; /* Remove default margin */
   overflow: hidden; /* Prevent scrollbars */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .container{
     display: flex;
