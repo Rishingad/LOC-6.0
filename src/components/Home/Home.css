@@ -6,7 +6,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: calc(100vh - 15rem);
+  height: calc(100vh - 16rem);
   overflow-y: auto;
 }
 
