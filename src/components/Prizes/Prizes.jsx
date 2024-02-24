@@ -17,7 +17,7 @@ function Prizes() {
       </div>
       <div className="prize-2">
       <div className="additional-animation" >
-
+ 
       </div>
       <div className='prize-money'>
       ₹75,000
