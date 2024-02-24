@@ -1,0 +1,118 @@
+.domain-wrapper {
+  padding: 7rem 0;
+  background-color: #0b101a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.domain-heading {
+  margin: 2rem 10rem;
+  font-size: 4rem;
+  color: #fff;
+}
+
+.domain-content {
+  padding: 1.5rem 10rem;
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  column-gap: 8rem;
+  row-gap: 5rem;
+}
+
+.domain-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url("../../../public/grill.png");
+  z-index: -1;
+}
+
+.domain-container {
+  width: 17rem;
+  height: 17rem;
+  position: relative;
+
+  border-radius: 4px;
+}
+.domain-card {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border-radius: 6px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+.domain-card div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 6px;
+
+  display: -ms-flexbox;
+
+  display: flex;
+  flex-direction: column;
+  -o-box-pack: center;
+  justify-content: center;
+  -o-box-align: center;
+  align-items: center;
+  font: 16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: #47525d;
+}
+.domain-card .domain-front {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.domain-card .domain-back {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.domain-card .domain-back::before {
+  position: absolute;
+  content: "";
+  inset: 0;
+  z-index: -1;
+  background-image: url("../../../public/area_51_without_bg.png");
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+.domain-card .domain-front img {
+  width: 100%;
+  height: 100%;
+}
+.domain-card .domain-back img {
+  width: 70%;
+  height: 70%;
+}
+.domain-card .domain-back p {
+  font-weight: 700;
+  background-color: #beb9b8;
+  font-size: 1.7rem;
+}
+.domain-card .domain-back {
+  transform: rotateY(180deg);
+  transition: transform 1s ease-in-out;
+}
+.domain-card:hover {
+  transform: rotateY(180deg);
+}
