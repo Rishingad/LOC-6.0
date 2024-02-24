@@ -4,6 +4,7 @@ import HomePage from "./pages/HomePage";
 import Sponsors from "./components/Sponsors";
 import FAQ from "./components/FAQ";
 import About from "./components/About/About";
+import Prizes from "./components/Prizes/Prizes";
 const MainRouter = () => {
   return (
     <>
@@ -13,6 +14,7 @@ const MainRouter = () => {
           <Route path="/sponsors" element={<Sponsors />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/about" element={<About />} />
+          <Route path="/prizes" element={< Prizes/>} />
         </Routes>
       </Router>
     </>

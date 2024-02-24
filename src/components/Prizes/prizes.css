@@ -1,0 +1,170 @@
+.prize-1 {
+    /* animation properties */
+    animation-name: prize-1-animation;
+    animation-duration: 2s;
+    animation-direction: alternate;
+    /* animation-iteration-count: 1; */
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    
+    /* other properties */
+    width: 350px;
+    height: 300px;
+    border-radius: 10px;
+    position: absolute;
+    right: 0; 
+    margin-left: auto;
+    margin-right: auto; 
+    background-image: url('../../assets/ufo.png');
+  
+  }
+  
+  @keyframes prize-1-animation {
+    from {
+      bottom: 0%;
+      left: -30%;
+    }
+    to {
+      
+      bottom: 50%;
+      left:-50%
+    }
+  }
+.prize-2 {
+    /* animation properties */
+    animation-name: ufo2-animation;
+    animation-duration: 2s;
+    animation-direction: alternate;
+    /* animation-iteration-count: 1; */
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+
+    
+    /* other properties */
+    width: 350px;
+    height: 300px;
+    border-radius: 10px;
+    position: absolute;
+    right: 0; 
+    margin-left: auto;
+    margin-right: auto; 
+    background-image: url('../../assets/ufo.png');
+  
+  }
+  
+  @keyframes ufo2-animation {
+    from {
+      bottom: 0%;
+      left: 0%;
+    }
+    to {
+      
+      bottom: 50%;
+      left:-2%
+    }
+  }
+  .prize-3 {
+    /* animation properties */
+    animation-name: ufo3-animation;
+    animation-duration: 2s;
+    animation-direction: alternate;
+    /* animation-iteration-count: 1; */
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+
+    
+    /* other properties */
+    width: 350px;
+    height: 300px;
+    border-radius: 10px;
+    position: absolute;
+    right: 0; 
+    margin-left: auto;
+    margin-right: auto; 
+    background-image: url('../../assets/ufo.png');
+  
+  }
+  
+  @keyframes ufo3-animation {
+    from {
+      bottom: 0%;
+      left: 35%;
+    }
+    to {
+      
+      bottom: 50%;
+      left:46%
+    }
+  }
+  .title{
+    color: white;
+    font-family: Bakbak One;
+font-size: 60px;
+font-weight: 400;
+line-height: 140px;
+letter-spacing: 0em;
+text-align: center;
+height: fit-content;
+
+
+  }
+  .additional-animation {
+    /* Additional animation properties  */
+    animation-name: additional-animation;
+    animation-delay: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    /* Set initial state */
+    opacity: 0;
+    margin-left: -22px;
+    margin-top:120px;
+    
+    /* width: 30%; */
+    background-image: url('../../assets/spotlight.svg');
+
+
+     } 
+
+  @keyframes additional-animation {
+    from {
+      opacity: 0;
+      bottom: 60%;
+    }
+    to {
+      opacity: 1;
+      bottom: 0%;
+      height: 210%;
+    }
+
+  } 
+
+  .prize-money{
+    position: absolute;
+  top: 210%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-family: Bakbak One;
+  font-size: 60px;
+  font-weight: 400;
+  line-height: 140px;
+  letter-spacing: 0em;
+  text-align: center;
+ /* Additional animation properties  */
+ animation-name: prize-animation;
+ animation-delay: 2s;
+ animation-timing-function: linear;
+ animation-fill-mode: forwards;
+ opacity: 0;
+  }
+  
+  @keyframes prize-animation {
+    from {
+      opacity: 0;
+
+    }
+    to {
+      opacity: 1;
+    
+    }
+  }

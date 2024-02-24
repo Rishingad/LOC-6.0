@@ -47,8 +47,8 @@ body{
 .about-us p{
     font-family: "Inter", sans-serif;
     line-height: 30px;
-    text-align: center;
-    font-size: 20px;
+    text-align: justify;
+    font-size: 25px;
 }
 .about-us p span{
     color: rgba(33, 231, 134, 1);
