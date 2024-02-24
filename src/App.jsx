@@ -1,10 +1,9 @@
-import React from "react";
-import MainRouter from "./Router";
 
+import HomePage from "./pages/HomePage";
 const App = () => {
   return (
     <>
-      <MainRouter />
+      <HomePage></HomePage>
     </>
   );
 };

@@ -1,4 +1,4 @@
-import React from "react";
+
 import bg from "/sponsor/bg_sponsor.png";
 import sponsors from "/sponsor/sponsors.png";
 

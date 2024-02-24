@@ -1,12 +1,16 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 @font-face {
-    font-family: "BakbakOne";
-    font-weight: 400;
-    src: local("bakbak"),
-      url(./fonts/BakbakOne-Regular.ttf) format("truetype");
-    /* other formats include: 'woff2', 'truetype, 'opentype',
+  font-family: "BakbakOne";
+  font-weight: 400;
+  src: local("bakbak"), url(./fonts/BakbakOne-Regular.ttf) format("truetype");
+  /* other formats include: 'woff2', 'truetype, 'opentype',
                                 'embedded-opentype', and 'svg' */
-  }
+}
+
+html {
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
