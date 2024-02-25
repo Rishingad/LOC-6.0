@@ -4,6 +4,8 @@ import Home from '../components/Home/Home'
 import Navbar from '../components/Navbar/Navbar'
 import Sponsors from '../components/Sponsors'
 import Domain from '../components/Domains/Domain'
+import Contact from '../components/Contact/Contact'
+import Glimpse from '../components/Glimpse/Glimpse'
 export default function HomePage() {
   // useEffect(() => {
   //   const script = document.createElement('script');
@@ -21,6 +23,8 @@ export default function HomePage() {
       <Home />
       <Spon sors></Spon>
       <Domain></Domain>
+      <Glimpse></Glimpse>
+      <Contact></Contact>
     </>
   )
 }
