@@ -43,6 +43,31 @@
   background-position: center;
   z-index: 2;
 }
+.img-wrapper {
+  overflow: hidden;
+  width: 3rem;
+  height: 3rem;
+  /* display: grid; */
+  /* display: grid; */
+  /* place-items: center; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.apply-with-devfolio-wrapper {
+  overflow: hidden;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1.5rem;
+  color: #fff;
+  background-color: #0d6efd;
+  border-radius: 0.7rem;
+  padding: 0.3rem 2rem;
+  cursor: pointer;
+  width: 20rem;
+}
 .content-wrapper {
   display: flex;
   flex-direction: column;

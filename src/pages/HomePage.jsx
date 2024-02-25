@@ -19,7 +19,7 @@ export default function HomePage() {
     <>
       <Navbar />
       <Home />
-      <Sponsors></Sponsors>
+      <Spon sors></Spon>
       <Domain></Domain>
     </>
   )
