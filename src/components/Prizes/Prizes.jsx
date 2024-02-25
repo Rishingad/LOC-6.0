@@ -1,4 +1,4 @@
-import React,  { useEffect, useRef }  from 'react';
+import React, { useEffect, useRef } from 'react';
 import './prizes.css';
 
 function Prizes() {
@@ -34,30 +34,30 @@ function Prizes() {
   }, []);
 
   return (
-    <div ref={prizesRef} className='prizes'>
-    <div className='title'>
-      PRIZES
-    </div>
+    <div ref={prizesRef} className='prizes' id='prizes'>
+      <div className='title'>
+        PRIZES
+      </div>
       <div className="prize-1" >
 
-      <div className="additional-animation" ></div>
-      <div className='prize-money'>
-      ₹50,000
-      </div>
+        <div className="additional-animation" ></div>
+        <div className='prize-money'>
+          ₹50,000
+        </div>
       </div>
       <div className="prize-2">
-      <div className="additional-animation" >
- 
-      </div>
-      <div className='prize-money'>
-      ₹75,000
-      </div>
+        <div className="additional-animation" >
+
+        </div>
+        <div className='prize-money'>
+          ₹75,000
+        </div>
       </div>
       <div className="prize-3">
-      <div className="additional-animation" ></div>
-      <div className='prize-money'>
-      ₹40,000
-      </div>
+        <div className="additional-animation" ></div>
+        <div className='prize-money'>
+          ₹40,000
+        </div>
       </div>
     </div>
   );

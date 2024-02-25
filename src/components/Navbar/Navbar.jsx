@@ -41,7 +41,7 @@ const Navbar = () => {
           <a href={"#domains"}>Domains</a>
         </li>
         <li className="cursor-pointer">
-          <a href={"#prize"}>Prizes</a>
+          <a href={"#prizes"}>Prizes</a>
         </li>
         <li className="cursor-pointer menu-item">
           <a href={"#faq"}>FAQs</a>
