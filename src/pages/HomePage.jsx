@@ -27,7 +27,7 @@ export default function HomePage() {
       <Sponsors></Sponsors>
       <Domain></Domain>
       <Prizes></Prizes>
-      <Glimpse></Glimpse>
+      {/* <Glimpse></Glimpse> */}
       <Contact></Contact>
     </>
   )

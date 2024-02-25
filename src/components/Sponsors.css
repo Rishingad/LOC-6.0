@@ -70,17 +70,17 @@
     flex-wrap: wrap;
   }
   .sponsors-wrapper img:nth-child(1) {
-    transform: translate(0%, 0%);
+    transform: translate(-2%, 0%);
   }
   .sponsors-wrapper img:nth-child(2) {
     transform: translate(0%, 0%);
   }
   .sponsors-wrapper img:nth-child(3) {
-    transform: translate(0%, 0%);
+    transform: translate(-2%, 0%);
   }
 
   .sponsors-wrapper img {
-    width: 15rem;
+    width: 13rem;
     position: static;
     top: 0;
     left: 0;

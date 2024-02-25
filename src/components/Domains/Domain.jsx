@@ -6,17 +6,7 @@ const Domain = () => {
                 <div className="domain-heading">Domains</div>
 
                 <div className="domain-content">
-                    {/* <div className="domain-card">
-                        <div className="content">
-                            <div className="domain-front">
-                                <img src="../../../public/entering_area_51.png" alt="" />
-                            </div>
-                            <div className="domain-back">
-                                <img src="../../../public/Domains/web.png" alt="" />
-                                <p>Web Dev</p>
-                            </div>
-                        </div>
-                    </div> */}
+
                     <div className="domain-container">
                         <div className="domain-card">
                             <div className="domain-front"> <img src="../../../public/entering_area_51.png" alt="" /></div>
