@@ -2,8 +2,8 @@ import './Domain.css'
 const Domain = () => {
     return (
         <>
-            <div className="domain-wrapper">
-                <div className="domain-heading">Domain</div>
+            <div className="domain-wrapper" id='#domains'>
+                <div className="domain-heading">Domains</div>
 
                 <div className="domain-content">
                     {/* <div className="domain-card">

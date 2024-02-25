@@ -1,4 +1,4 @@
-import React from "react";
+
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import Sponsors from "./components/Sponsors";
@@ -14,13 +14,13 @@ const MainRouter = () => {
           <Route path="/sponsors" element={<Sponsors />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/about" element={<About />} />
-          <Route path="/prizes" element={< Prizes/>} />
+          <Route path="/prizes" element={< Prizes />} />
         </Routes>
       </Router>
     </>
   );
 };
-
+export default MainRouter;
 // // import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 // import HomePage from "./pages/HomePage";
 // // import Sponsors from "./components/Sponsors";

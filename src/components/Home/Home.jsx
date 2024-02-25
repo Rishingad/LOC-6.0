@@ -1,4 +1,5 @@
 import './Home.css'
+import { useEffect } from 'react';
 const Home = () => {
 
     // useEffect(() => {
@@ -21,14 +22,19 @@ const Home = () => {
                     <div className="subtitle-wrapper">
                         A 24 hour National level hackathon conducted in hybrid mode organized by Dwarkadas J Sanghvi College of Engineering’s ACM Student Chapter
                     </div>
-                    <div className="devfolio_wrapper">
-                        {/* <div
-                            className="apply-button"
-                            data-hackathon-slug="lines-of-code-djsce"
-                            data-button-theme="light"
 
-                        ></div> */}
-                    </div>
+                    {/* <div
+                        className="apply-button"
+                        data-hackathon-slug={"lines-of-code-djsce"}
+                        data-button-theme={"light"}
+                        style={{ height: '44px', width: '312px' }}
+                    ></div> */}
+                    <a className="apply-with-devfolio-wrapper" href='https://lines-of-code-djsce.devfolio.co/' target='_blank'>
+                        <div className="img-wrapper">
+                            <img src="../../../public/logo/devfolio_logo_white.png" alt="" />
+                        </div>
+                        <p>Apply with Devfolio</p>
+                    </a>
                 </div>
 
             </div>
