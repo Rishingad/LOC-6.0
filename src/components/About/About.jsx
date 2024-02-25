@@ -2,7 +2,7 @@ import React from 'react'
 import './about.css'
 function About() {
   return (
-<div className="container">
+<div className="about-container">
     <div className='about-section'>
     <div className="circle top-left"></div>
      

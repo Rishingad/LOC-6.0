@@ -1,4 +1,17 @@
-.prize-1 {
+@import url('https://fonts.googleapis.com/css2?family=Bakbak+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bakbak+One&family=Inter:wght@100..900&display=swap');
+.prizes{
+  background-color: rgba(4, 11, 17, 1);
+  margin: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  min-height: 1000px; /* Set a suitable minimum height */
+  height: auto; /* Allow the height to adjust based on content */
+}
+.animation-started  .prize-1 {
     /* animation properties */
     animation-name: prize-1-animation;
     animation-duration: 2s;
@@ -8,8 +21,8 @@
     animation-fill-mode: forwards;
     
     /* other properties */
-    width: 350px;
-    height: 300px;
+    width: 25%;
+    height: 30%;
     border-radius: 10px;
     position: absolute;
     right: 0; 
@@ -30,7 +43,7 @@
       left:-50%
     }
   }
-.prize-2 {
+  .animation-started  .prize-2 {
     /* animation properties */
     animation-name: ufo2-animation;
     animation-duration: 2s;
@@ -41,8 +54,8 @@
 
     
     /* other properties */
-    width: 350px;
-    height: 300px;
+    width: 25%;
+    height: 30%;
     border-radius: 10px;
     position: absolute;
     right: 0; 
@@ -63,7 +76,7 @@
       left:-2%
     }
   }
-  .prize-3 {
+  .animation-started   .prize-3 {
     /* animation properties */
     animation-name: ufo3-animation;
     animation-duration: 2s;
@@ -74,8 +87,8 @@
 
     
     /* other properties */
-    width: 350px;
-    height: 300px;
+    width: 25%;
+    height: 30%;
     border-radius: 10px;
     position: absolute;
     right: 0; 
@@ -96,7 +109,8 @@
       left:46%
     }
   }
-  .title{
+  .animation-started  .title{
+    align-items: flex-start;
     color: white;
     font-family: Bakbak One;
 font-size: 60px;
@@ -105,10 +119,11 @@ line-height: 140px;
 letter-spacing: 0em;
 text-align: center;
 height: fit-content;
-
-
+z-index: 2; /* Adjust the value as needed */
+position: relative;
+margin-top: -50%;
   }
-  .additional-animation {
+  .animation-started  .additional-animation {
     /* Additional animation properties  */
     animation-name: additional-animation;
     animation-delay: 2s;
@@ -116,8 +131,8 @@ height: fit-content;
     animation-fill-mode: forwards;
     /* Set initial state */
     opacity: 0;
-    margin-left: -22px;
-    margin-top:120px;
+    margin-left: -5%;
+    margin-top:20%;
     
     /* width: 30%; */
     background-image: url('../../assets/spotlight.svg');
@@ -138,7 +153,7 @@ height: fit-content;
 
   } 
 
-  .prize-money{
+  .animation-started  .prize-money{
     position: absolute;
   top: 210%;
   left: 50%;
@@ -167,4 +182,31 @@ height: fit-content;
       opacity: 1;
     
     }
+  }
+
+
+
+  .animation-started .prize-1 {
+    animation-name: prize-1-animation;
+    /* ... rest of the styles ... */
+  }
+  
+  .animation-started .prize-2 {
+    animation-name: ufo2-animation;
+    /* ... rest of the styles ... */
+  }
+  
+  .animation-started .prize-3 {
+    animation-name: ufo3-animation;
+    /* ... rest of the styles ... */
+  }
+  
+  .animation-started .additional-animation {
+    animation-name: additional-animation;
+    /* ... rest of the styles ... */
+  }
+  
+  .animation-started .prize-money {
+    animation-name: prize-animation;
+    /* ... rest of the styles ... */
   }
