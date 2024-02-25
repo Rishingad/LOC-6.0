@@ -21,7 +21,7 @@ export default function HomePage() {
     <>
       <Navbar />
       <Home />
-      <Spon sors></Spon>
+      <Sponsors></Sponsors>
       <Domain></Domain>
       <Glimpse></Glimpse>
       <Contact></Contact>

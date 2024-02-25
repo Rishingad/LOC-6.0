@@ -8,7 +8,7 @@ import './Sponsors.css';
 const Sponsors = () => {
   return (
     <>
-      <section className=" bg-[#040B11] w-full relative overflow-hidden">
+      <section className=" bg-[#040B11] w-full relative overflow-hidden" id="#sponsors">
         <div className=" relative w-full">
           <p className=" font-bakbak w-full  text-center font-semibold text-[5rem] text-white mt-24">
             Sponsors
