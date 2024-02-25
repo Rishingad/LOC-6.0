@@ -7,7 +7,7 @@ import Domain from '../components/Domains/Domain'
 import Prizes from '../components/Prizes/Prizes'
 import About from '../components/About/About'
 import Contact from '../components/Contact/Contact'
-// import Glimpse from '../components/Glimpse/Glimpse'
+import Glimpse from '../components/Glimpse/Glimpse'
 export default function HomePage() {
   // useEffect(() => {
   //   const script = document.createElement('script');
@@ -27,7 +27,7 @@ export default function HomePage() {
       <Sponsors></Sponsors>
       <Domain></Domain>
       <Prizes></Prizes>
-      {/* <Glimpse></Glimpse> */}
+      <Glimpse></Glimpse>
       <Contact></Contact>
     </>
   )

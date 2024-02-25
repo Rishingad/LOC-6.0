@@ -1,76 +1,62 @@
-import React from 'react';
-import rocket from "../../assets/newRocket.png"
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
+import React from 'react'
+import Carousel, { consts } from "react-elastic-carousel";
 import "./Glimpse.css"
-import G1 from "../../assets/G1.jpg"
-import G2 from "../../assets/G2.jpg"
-import G3 from "../../assets/G3.jpg"
-import G4 from "../../assets/G4.jpg"
-import G5 from "../../assets/G5.jpg"
-import G6 from "../../assets/G6.jpg"
+import { FaArrowCircleRight, FaArrowCircleLeft } from "react-icons/fa";
 
-const Glimpse = () => {
+
+import img1 from "../../assets/G1.jpg";
+import img2 from "../../assets/G2.jpg";
+import img3 from "../../assets/G3.jpg";
+import img4 from "../../assets/G4.jpg";
+import img5 from "../../assets/G5.jpg";
+import img6 from "../../assets/G6.jpg";
+
+const breakPoints = [
+  { width: 1, itemsToShow: 1 },
+  { width: 550, itemsToShow: 2 },
+  { width: 1500, itemsToShow: 2 },
+];
+
+const myArrow = ({ type, onClick, isEdge }) => {
+  const pointer = type === consts.PREV ? <FaArrowCircleRight className='custom_icon' /> : <FaArrowCircleLeft className='custom_icon' />
+  return (
+    <button onClick={onClick} disabled={isEdge}>
+      {pointer}
+    </button>
+  )
+}
+
+const CarouselMain = () => {
   const settings = {
-    dots: false,
-    infinite: true,
-    speed: 17000,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 0,
-    cssEase: 'linear',
-    pauseOnHover: false,
-    responsive: [
-      {
-        breakpoint: 780,
-        settings: {
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-    ],
+    pagination: true,
+    isRTL: true,
   };
 
+  const items = [
+    { id: 6, img: img6 },
+    { id: 1, img: img1 },
+    { id: 2, img: img2 },
+    { id: 3, img: img3 },
+    { id: 4, img: img4 },
+    { id: 5, img: img5 },
+  ]
   return (
     <>
-      <div className="bg_gradient1"></div>
-      <div className="bg_gradient2"></div>
-      <h1 className='glimpse_head'>Glimpse of LOC 5.0</h1>
-      <Slider {...settings}>
-        <div>
-          <h2></h2>
+      <div className="carousel_main">
+        <h1 className='carousel_head'>Glimpse of LOC 5.0</h1>
+        <div className="carousel_elastic">
+          <Carousel renderArrow={myArrow} {...settings} breakPoints={breakPoints}>
+            {items.map((item) => (
+              <div className='item_set' key={item.id}>
+                <img className='item_img' src={item.img} alt="" />
+                {/* <h2 className='item_head'>{item.content}</h2> */}
+              </div>
+            ))}
+          </Carousel>
         </div>
-        <div className='myDiv imgDiv'>
-          <img style={{ height: "50vh" }} src={rocket} alt="" />
-        </div>
-        <div className='myDiv'>
-          <img style={{ height: "50vh" }} src={G1} className='main_img' alt="" />
-        </div>
-        <div className='myDiv'>
-          <img style={{ height: "50vh" }} src={G2} className='main_img' alt="" />
-        </div>
-        <div className='myDiv'>
-          <img style={{ height: "50vh" }} src={G3} className='main_img' alt="" />
-        </div>
-        <div className='myDiv'>
-          <img style={{ height: "50vh" }} src={G4} className='main_img' alt="" />
-        </div>
-        <div className='myDiv'>
-          <img style={{ height: "50vh" }} src={G5} className='main_img' alt="" />
-        </div>
-        <div className='myDiv'>
-          <img style={{ height: "50vh" }} src={G6} className='main_img' alt="" />
-        </div>
-      </Slider>
+      </div>
     </>
-  );
-};
+  )
+}
 
-export default Glimpse;
+export default CarouselMain
