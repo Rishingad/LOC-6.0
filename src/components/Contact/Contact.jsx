@@ -41,8 +41,8 @@ const Contact = () => {
               </div>
             </div>
             <h1 className="inner_contact_head">Phone Number</h1>
-            <div className="number number1">Deepika Muchhala - +919372022651</div>
-            <div className="number number2">Devarshee Thopte - +919967542771</div>
+            <div className="number number1"><span>Deepika Muchhala -</span><span>+919372022651</span></div>
+            <div className="number number2"><span>Devarshee Thopte -</span><span>+919967542771</span></div>
             <h1 className="inner_contact_head">Socials</h1>
             <div className="socials_icons">
               <a target="blank" href="https://instagram.com/djsanghvi_acm">

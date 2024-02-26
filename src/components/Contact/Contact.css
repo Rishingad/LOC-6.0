@@ -98,6 +98,7 @@
 .right_container {
   position: relative;
 }
+
 .right_container iframe {
   min-width: 37vw;
   height: 65vh;
@@ -201,6 +202,12 @@
   }
 }
 
+@media only screen and (max-width: 500px) {
+  .right_container iframe {
+    height: 40vh;
+  }
+}
+
 @media only screen and (max-width: 420px) {
   .spinner {
     margin-top: 31rem;
@@ -208,9 +215,13 @@
   }
 }
 
-@media only screen and (max-width: 500px) {
-  .right_container iframe {
-    height: 40vh;
+@media only screen and (max-width: 400px) {
+  .contact_head{
+    font-size: 3rem;
+  }
+  .number{
+    display: flex;
+    flex-direction: column;
   }
 }
 
