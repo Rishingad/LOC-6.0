@@ -1,10 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Bakbak+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bakbak+One&family=Inter:wght@100..900&display=swap');
+@font-face {
+  font-family: nicoMoji;
+  src: url(../../../public/fonts/NicoMoji-Regular.ttf);
+}
 .prizes{
   background-color: rgba(4, 11, 17, 1);
   margin: 0;
   overflow: hidden;
   display: flex;
+  margin-left: 5%;
   justify-content: center;
   align-items: center;
   position: relative;
@@ -113,18 +118,25 @@
     }
   }
   .animation-started  .title{
+    
     align-items: flex-start;
-    color: white;
-    font-family: Bakbak One;
-font-size: 60px;
-font-weight: 400;
+    background-image: linear-gradient(to left, #23cd6b, #373f3f);
+    -webkit-background-clip: text;
+    color: transparent; 
+    display: inline-block; 
+    font-family: Nicomoji;
+font-size: 110px;
+font-weight: 200;
 line-height: 140px;
 letter-spacing: 0em;
 text-align: center;
 height: fit-content;
 z-index: 2; /* Adjust the value as needed */
 position: relative;
-margin-top: -50%;
+margin-top: -45%;
+/* Adjust the color stops as needed */
+background-clip: text;
+-webkit-background-clip: text; /* For compatibility with some browsers */
   }
   .animation-started  .additional-animation {
     /* Additional animation properties  */
@@ -157,13 +169,67 @@ margin-top: -50%;
 
   } 
 
-  .animation-started  .prize-money{
+  .animation-started  .prize-money-first{
     position: absolute;
   top: 210%;
-  left: 45%;
+  left: 38%;
   transform: translate(-50%, -50%);
-  color: white;
-  font-family: Bakbak One;
+  align-items: flex-start;
+  background-image: linear-gradient(to left, #ffffff,#FFD700);
+  -webkit-background-clip: text;
+  color: transparent; 
+  display: inline-block; 
+  font-family: Nicomoji;
+  
+  font-size: 60px;
+  font-weight: 400;
+  line-height: 140px;
+  letter-spacing: 0em;
+  text-align: center;
+ /* Additional animation properties  */
+ animation-name: prize-animation;
+ animation-delay: 2s;
+ animation-timing-function: linear;
+ animation-fill-mode: forwards;
+ opacity: 0;
+  }
+  
+  .animation-started  .prize-money-second{
+    position: absolute;
+  top: 210%;
+  left: 38%;
+  transform: translate(-50%, -50%);
+  align-items: flex-start;
+  background-image: linear-gradient(to left, #ffffff,#bcc6cc);
+  -webkit-background-clip: text;
+  color: transparent; 
+  display: inline-block; 
+  font-family: Nicomoji;
+  
+  font-size: 60px;
+  font-weight: 400;
+  line-height: 140px;
+  letter-spacing: 0em;
+  text-align: center;
+ /* Additional animation properties  */
+ animation-name: prize-animation;
+ animation-delay: 2s;
+ animation-timing-function: linear;
+ animation-fill-mode: forwards;
+ opacity: 0;
+  }
+  .animation-started  .prize-money-third{
+    position: absolute;
+  top: 210%;
+  left: 38%;
+  transform: translate(-50%, -50%);
+  align-items: flex-start;
+  background-image: linear-gradient(to left, #ffffff,#964B00);
+  -webkit-background-clip: text;
+  color: transparent; 
+  display: inline-block; 
+  font-family: Nicomoji;
+  
   font-size: 60px;
   font-weight: 400;
   line-height: 140px;
@@ -214,3 +280,149 @@ margin-top: -50%;
     animation-name: prize-animation;
     /* ... rest of the styles ... */
   }
+  .mobile-phone-prizes{
+    display: none;
+  }@media (max-width: 1356px) {
+
+    .mobile-additional-animation {
+ 
+      /* Set initial state */
+      height: 100%;
+      width:100%;
+      margin-left: -5%;
+      
+      /* width: 30%; */
+      background-image: url('../../assets/spotlight.svg');
+      background-repeat: no-repeat;
+  
+  
+       } 
+  
+    @keyframes mobile-additional-animation {
+      from {
+        opacity: 0;
+        top: 0%;
+      }
+      to {
+        opacity: 1;
+        top: 20%;
+
+      }
+  
+    } 
+    .mobile-prize-1 {
+      position: relative;
+      height: 800px;
+      width: 400px;
+      border-radius: 10px;
+      background-image: url('../../assets/ufo.png');
+      background-repeat: no-repeat;
+      display: block;
+      z-index: 1;
+      animation: bounceAnimation 1s infinite alternate; /* Adjust the animation duration and other properties as needed */
+    }
+    
+    @keyframes bounceAnimation {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(-10px); /* Adjust the bounce height as needed */
+      }
+    }
+    .mobile-phone-prizes {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+  
+    .prizes {
+      display: none !important;
+    }
+    .mobile-title {
+     
+      align-items: flex-start;
+      background-image: linear-gradient(to left, #23cd6b, #373f3f);
+      -webkit-background-clip: text;
+      color: transparent; 
+      display: inline-block; 
+      font-family: Nicomoji;
+      font-size: 80px; /* Keep the intended size */
+      font-weight: 400; /* Preserve the original weight */
+      line-height: 140px; /* Maintain line height for legibility */
+      letter-spacing: 0em; /* Keep default letter spacing */
+      text-align: center; /* Center alignment for visual balance */
+      display: flex; /* Allow for multi-line text if needed */
+      flex-direction: column; /* Stack text vertically if multiple lines */
+      align-items: center; /* Center text horizontally */
+      z-index: 1; /* Maintain appropriate stacking order */
+    
+    }
+    .mobile-money-first {
+      align-items: flex-start;
+      background-image: linear-gradient(to left, #ffffff,#FFD700);
+      -webkit-background-clip: text;
+      color: transparent; 
+      display: inline-block; 
+      font-family: Nicomoji;
+      font-size: 60px;
+      font-weight: 400;
+      line-height: 140px;
+      letter-spacing: 0em;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      z-index: 1; /* or any appropriate value */
+      margin-top: -180px;
+    }
+    .mobile-money-second {
+      background-image: linear-gradient(to left, #ffffff,#bcc6cc);
+      -webkit-background-clip: text;
+      color: transparent; 
+      display: inline-block; 
+      font-family: Nicomoji;
+      font-size: 60px;
+      font-weight: 400;
+      line-height: 140px;
+      letter-spacing: 0em;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      z-index: 1; /* or any appropriate value */
+      margin-top: -180px;
+    }
+    .mobile-money-third {
+      background-image: linear-gradient(to left, #ffffff,#964B00);
+      -webkit-background-clip: text;
+      color: transparent; 
+      display: inline-block; 
+      font-family: Nicomoji;
+      font-size: 60px;
+      font-weight: 400;
+      line-height: 140px;
+      letter-spacing: 0em;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      z-index: 1; /* or any appropriate value */
+      margin-top: -180px;
+    }
+  }
+  
+
+  @keyframes phone-ufo1-animation {
+    from {
+      left: 0%;
+      top: 0%;
+    }
+    to {
+      
+      left: 50%;
+      top:0%
+ }
+}

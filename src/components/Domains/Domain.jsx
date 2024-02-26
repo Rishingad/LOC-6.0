@@ -38,22 +38,22 @@ const Domain = () => {
   return (
     <>
       <div className="domain-wrapper" id="domains">
-        <div className="domain-heading" data-aos="fade-right">
+        <div className="domain-heading">
           Domains
         </div>
         <div className="domain-content">
           <div className="domain-container">
             <div
-              data-aos="fade-left"
+              
               className={`domain-card ${isScrolled ? "flip-domain" : ""}`}
             >
               <div className="domain-front">
                 {" "}
-                <img src="../../../public/entering_area_51.png" alt="" />
+                <img src="../entering_area_51.png" alt="" />
               </div>
               <div className="domain-back">
                 {" "}
-                <img src="../../../public/Domains/webapp.png" alt="" />
+                <img src="../Domains/webapp.png" alt="" />
                 <p>Web/App</p>
               </div>
             </div>
@@ -61,49 +61,49 @@ const Domain = () => {
 
           <div className="domain-container">
             <div
-              data-aos="fade-left"
+              
               className={`domain-card ${isScrolled ? "flip-domain" : ""}`}
             >
               <div className="domain-front">
                 {" "}
-                <img src="../../../public/entering_area_51.png" alt="" />
+                <img src="../entering_area_51.png" alt="" />
               </div>
               <div className="domain-back">
                 {" "}
-                <img src="../../../public/Domains/aiml.png" alt="" />
+                <img src="../Domains/aiml.png" alt="" />
                 <p>AI/ML</p>
               </div>
             </div>
           </div>
-          <div className="domain-container">
+          <div className="domain-container" id="">
             <div
-              data-aos="fade-left"
+              
               className={`domain-card ${isScrolled ? "flip-domain" : ""}`}
             >
               <div className="domain-front">
                 {" "}
-                <img src="../../../public/entering_area_51.png" alt="" />
+                <img src="../entering_area_51.png" alt="" />
               </div>
               <div className="domain-back">
                 {" "}
-                <img src="../../../public/Domains/blockchain.png" alt="" />
+                <img src="../Domains/blockchain.png" alt="" />
                 <p>Blockchain</p>
               </div>
             </div>
           </div>
 
-          <div className="domain-container">
+          <div className="domain-container" id="open-innovation">
             <div
-              data-aos="fade-left"
+              
               className={`domain-card ${isScrolled ? "flip-domain" : ""}`}
             >
               <div className="domain-front">
                 {" "}
-                <img src="../../../public/entering_area_51.png" alt="" />
+                <img src="../entering_area_51.png" alt="" />
               </div>
               <div className="domain-back">
                 {" "}
-                <img src="../../../public/Domains/openinnovation.png" alt="" />
+                <img src="../Domains/openinnovation.png" alt="" />
                 <p>Open Innovation</p>
               </div>
             </div>

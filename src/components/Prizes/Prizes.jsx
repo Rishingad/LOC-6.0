@@ -1,7 +1,6 @@
-import React, { useEffect, useRef } from "react";
-import "./prizes.css";
+import React, { useEffect, useRef } from 'react';
+import './prizes.css';
 import Aos from "aos";
-
 function Prizes() {
   const prizesRef = useRef(null);
   useEffect(() => {
@@ -40,24 +39,52 @@ function Prizes() {
   }, []);
 
   return (
-    <div ref={prizesRef} className="prizes" id="prizes">
-      <div data-aos="fade-right" className="title">
+    <>
+    <div ref={prizesRef} className='prizes' id='prizes'>
+      <div  className='title text-6xl mr-[4%] font-bold text-transparent bg-clip-text'>
         PRIZES
       </div>
       <div className="prize-1">
         <div className="additional-animation"></div>
-        <div className="prize-money">₹50,000</div>
+        <div className="prize-money-second">₹50,000</div>
       </div>
       <div className="prize-2">
         <div className="additional-animation"></div>
-        <div className="prize-money">₹75,000</div>
+        <div className="prize-money-first">₹75,000</div>
       </div>
       <div className="prize-3">
         <div className="additional-animation"></div>
-        <div className="prize-money">₹40,000</div>
+        <div className="prize-money-third">₹30,000</div>
       </div>
     </div>
+    <div className='mobile-phone-prizes'>
+<div className='mobile-title'>
+  PRIZES
+  </div>
+<div className="mobile-prize-1" >
+<div className="mobile-additional-animation" ></div>
+</div>
+        <div className='mobile-money-first'>
+          ₹75,000
+        </div>
+  <div className='second-third-prize'>
+<div className="mobile-prize-1" >
+<div className="mobile-additional-animation" ></div>
+</div>
+
+        <div className='mobile-money-second'>
+          ₹50,000
+        </div>
+<div className="mobile-prize-1" >
+<div className="mobile-additional-animation" ></div>
+</div>
+        <div className='mobile-money-third'>
+          ₹40,000
+        </div>
+  </div>
+    </div>
+    </>
   );
 }
 
-export default Prizes;
+export default Prizes;
