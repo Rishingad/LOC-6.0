@@ -12,7 +12,6 @@ const Navbar = () => {
     setIsMenuOpen((state) => !state);
   }
 
-
   const [scrollPosition, setScrollPosition] = useState(0);
 
   useEffect(() => {
@@ -21,15 +20,15 @@ const Navbar = () => {
       console.log(window.screenX);
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   return (
-    <nav className={`navbar ${scrollPosition > 400 ? 'navbar-fill' : ''}`}>
+    <nav className={`navbar ${scrollPosition > 400 ? "navbar-fill" : ""}`}>
       <a href="/">
         <img src={Logo} height={70} width={90} alt=""></img>
       </a>

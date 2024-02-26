@@ -1,8 +1,7 @@
-import React from 'react'
+import React, { useEffect } from "react";
 import Carousel, { consts } from "react-elastic-carousel";
-import "./Glimpse.css"
+import "./Glimpse.css";
 import { FaArrowCircleRight, FaArrowCircleLeft } from "react-icons/fa";
-
 
 import img1 from "../../assets/G1.jpg";
 import img2 from "../../assets/G2.jpg";
@@ -10,6 +9,7 @@ import img3 from "../../assets/G3.jpg";
 import img4 from "../../assets/G4.jpg";
 import img5 from "../../assets/G5.jpg";
 import img6 from "../../assets/G6.jpg";
+import Aos from "aos";
 
 const breakPoints = [
   { width: 1, itemsToShow: 1 },
@@ -18,13 +18,18 @@ const breakPoints = [
 ];
 
 const myArrow = ({ type, onClick, isEdge }) => {
-  const pointer = type === consts.PREV ? <FaArrowCircleRight className='custom_icon' /> : <FaArrowCircleLeft className='custom_icon' />
+  const pointer =
+    type === consts.PREV ? (
+      <FaArrowCircleRight className="custom_icon" />
+    ) : (
+      <FaArrowCircleLeft className="custom_icon" />
+    );
   return (
     <button onClick={onClick} disabled={isEdge}>
       {pointer}
     </button>
-  )
-}
+  );
+};
 
 const CarouselMain = () => {
   const settings = {
@@ -39,16 +44,28 @@ const CarouselMain = () => {
     { id: 3, img: img3 },
     { id: 4, img: img4 },
     { id: 5, img: img5 },
-  ]
+  ];
+  useEffect(() => {
+    Aos.init({
+      duration: 1000,
+      easing: "ease-in-out",
+    });
+  }, []);
   return (
     <>
       <div className="carousel_main">
-        <h1 className='carousel_head'>Glimpse of LOC 5.0</h1>
-        <div className="carousel_elastic">
-          <Carousel renderArrow={myArrow} {...settings} breakPoints={breakPoints}>
+        <h1 className="carousel_head" data-aos="fade-right">
+          Glimpse of LOC 5.0
+        </h1>
+        <div className="carousel_elastic" data-aos="fade-left">
+          <Carousel
+            renderArrow={myArrow}
+            {...settings}
+            breakPoints={breakPoints}
+          >
             {items.map((item) => (
-              <div className='item_set' key={item.id}>
-                <img className='item_img' src={item.img} alt="" />
+              <div className="item_set" key={item.id}>
+                <img className="item_img" src={item.img} alt="" />
                 {/* <h2 className='item_head'>{item.content}</h2> */}
               </div>
             ))}
@@ -56,7 +73,7 @@ const CarouselMain = () => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default CarouselMain
+export default CarouselMain;

@@ -1,7 +1,7 @@
 // import { useEffect } from 'react'
 import Home from "../components/Home/Home";
 import Navbar from "../components/Navbar/Navbar";
-import Sponsors2 from "../components/Sponsors";
+// import Sponsors2 from "../components/Sponsors";
 import Domain from "../components/Domains/Domain";
 import Prizes from "../components/Prizes/Prizes";
 import About from "../components/About/About";
@@ -26,7 +26,7 @@ export default function HomePage() {
       <Navbar />
       <Home />
       <About></About>
-      <Sponsors2></Sponsors2>
+      {/* <Sponsors2></Sponsors2> */}
       <Sponsors />
       <Domain></Domain>
       <Prizes></Prizes>
